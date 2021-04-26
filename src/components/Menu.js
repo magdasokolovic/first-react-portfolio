@@ -13,9 +13,6 @@ export default function Menu({state}) {
     let line3 = useRef(null)
     let info = useRef(null)
 
-
-
-
     // useEffect to be able to toggle the menu back and forth: 
     useEffect(() => {
         if (state.clicked === false) {
