@@ -3,7 +3,7 @@ import {TweenMax, TimelineLite, Power3} from 'gsap'
 // import './App.scss';
 import './Home.scss'
 //Assets:
-import arrow from './images/arrow-right.svg'
+// import arrow from './images/arrow-right.svg'
 import me from './images/pbf_portraits_magda-3050142-2.avif';
 import me2 from './images/pbf_portraits_magda-3050197-2.avif'
 
@@ -81,7 +81,7 @@ export default function Home() {
                       </div>
                   </h1>
 
-                  <p>Contact me for any important or unimportant reason</p>
+                  <p>Contact me for any !important reason</p>
                   {/* <div className="btn-row">
                     <button className="explore-button">
                       Explore

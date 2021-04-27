@@ -15,14 +15,16 @@ const Loading = ({loading}) => {
     }
 
     return (
-        <div className='container'>
-            <div className='wrapper'>
-                <Lottie 
-                    options={defaultOptions}
-                    height={400}
-                    width={400}
-                    loading={loading}
-                />
+        <div style={{height: '100vh', backgroundColor: '#191919', display: 'grid', placeContent: 'center'}}>
+            <div className='container'>
+                <div className='wrapper'>
+                    <Lottie 
+                        options={defaultOptions}
+                        height={400}
+                        width={400}
+                        loading={loading}
+                    />
+                </div>
             </div>
         </div>
 
