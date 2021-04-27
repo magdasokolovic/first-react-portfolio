@@ -82,14 +82,14 @@ export default function Home() {
                   </h1>
 
                   <p>Contact me for any important or unimportant reason</p>
-                  <div className="btn-row">
+                  {/* <div className="btn-row">
                     <button className="explore-button">
                       Explore
                       <div className="arrow-icon">
                         <img src={arrow} alt='arrow'/>
                       </div>
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 

@@ -34,8 +34,8 @@ export default function Contact() {
 
                     <Lottie 
                         options={defaultOptions}
-                        height={350}
-                        width={500}
+                        height={400}
+                        width={620}
                     />
                 </div>
 
