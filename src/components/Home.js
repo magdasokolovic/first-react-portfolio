@@ -4,8 +4,8 @@ import {TweenMax, TimelineLite, Power3} from 'gsap'
 import './Home.scss'
 //Assets:
 import arrow from './images/arrow-right.svg'
-import me from './images/me.jpg';
-import me2 from './images/me2.jpg'
+import me from './images/pbf_portraits_magda-3050142-2.avif';
+import me2 from './images/pbf_portraits_magda-3050197-2.avif'
 
 
 export default function Home() {
@@ -19,7 +19,6 @@ export default function Home() {
   useEffect(() => {
     const firstImage = images.firstElementChild;
     const secondImage = images.lastElementChild;
-
     const headlineFirst = content.children[0].children[0]
     const headlineSecond = headlineFirst.nextSibling;
     const headlineThird = headlineSecond.nextSibling;
@@ -54,10 +53,9 @@ export default function Home() {
   })
 
     return (
-      <div className='container'>
-        <div className='wrapper'>
+      <div className='home-container'>
+        <div className='home-wrapper'>
           <div className="hero" ref={el => app = el}>
-        
             <div className="hero-inner">
               <div className="hero-content">
                 <div className="hero-content-inner" ref={el => content = el}>
@@ -65,20 +63,20 @@ export default function Home() {
                   <h1>
                     <div className="hero-content-line">
                       <div className="hero-content-line-inner">
-                          Welcome to MAGDA's world
+                          Welcome to my portfolio
                         </div>
                       </div>
 
                       <div className="hero-content-line">
                         <div className="hero-content-line-inner">
-                          Scroll down for more
+                          I build website
                         </div>
                       </div>
 
 
                       <div className="hero-content-line">
                         <div className="hero-content-line-inner">
-                          ...or not :)
+                          and have a lot of fun with it
                         </div>
                       </div>
                   </h1>
@@ -94,6 +92,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
               <div className="hero-images">
                 <div className="hero-images-inner" ref={el => images = el}>
                   <div className="hero-image me">
@@ -109,7 +108,7 @@ export default function Home() {
         
           </div>
         </div>
-      </div>
+      </div> 
     );
 }
 

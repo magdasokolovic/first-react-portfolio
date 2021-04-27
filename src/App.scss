@@ -20,18 +20,16 @@ body {
 
   .wrapper {
     padding: 0 48px;
-
-    .home {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 100%;
-      
-    }
   }
 }
 
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
 p {
   font-size: .75rem;
   letter-spacing: 0.3rem;
