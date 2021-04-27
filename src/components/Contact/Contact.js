@@ -1,7 +1,7 @@
 import React from "react";
 import './Contact.scss'
 import Lottie from 'react-lottie';
-import animationData from './lotties/contact-me.json';
+import animationData from '../lotties/contact-me.json';
 
 
 

@@ -1,11 +1,11 @@
 import React, {useRef, useEffect} from 'react';
 import {TweenMax, TimelineLite, Power3} from 'gsap'
 // import './App.scss';
-import './Home.scss'
+import '../Home/Home.scss'
 //Assets:
-// import arrow from './images/arrow-right.svg'
-import me from './images/pbf_portraits_magda-3050142-2.avif';
-import me2 from './images/pbf_portraits_magda-3050197-2.avif'
+import arrow from './images/arrow-right.svg'
+import me from './images/me.jpg';
+import me2 from './images/me2.jpg'
 
 
 export default function Home() {
@@ -53,8 +53,8 @@ export default function Home() {
   })
 
     return (
-      <div className='home-container'>
-        <div className='home-wrapper'>
+      <div className='home-container container'>
+        <div className='home-wrapper wrapper'>
           <div className="hero" ref={el => app = el}>
             <div className="hero-inner">
               <div className="hero-content">
@@ -63,33 +63,33 @@ export default function Home() {
                   <h1>
                     <div className="hero-content-line">
                       <div className="hero-content-line-inner">
-                          Welcome to my portfolio
+                          Welcome to my portfolio.
                         </div>
                       </div>
 
                       <div className="hero-content-line">
                         <div className="hero-content-line-inner">
-                          I build website
+                          I build websites <span className="red">&</span>
                         </div>
                       </div>
 
 
                       <div className="hero-content-line">
                         <div className="hero-content-line-inner">
-                          and have a lot of fun with it
+                          I have a lot of fun with it
                         </div>
                       </div>
                   </h1>
 
-                  <p>Contact me for any !important reason</p>
-                  {/* <div className="btn-row">
+                  <p>Contact me for any <span className="red">!</span>important reason</p>
+                  <div className="btn-row">
                     <button className="explore-button">
-                      Explore
+                      Explore my work
                       <div className="arrow-icon">
                         <img src={arrow} alt='arrow'/>
                       </div>
                     </button>
-                  </div> */}
+                  </div>
                 </div>
               </div>
 
@@ -108,7 +108,7 @@ export default function Home() {
         
           </div>
         </div>
-      </div> 
+    </div> 
     );
 }
 

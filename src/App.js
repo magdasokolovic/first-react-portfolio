@@ -3,9 +3,9 @@ import React, {useState, useEffect} from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import './App.scss';
 import Header from './components/Header'
-import Books from './components/Books'
-import Contact from './components/Contact'
-import Home from './components/Home'
+import Books from './components/Books/Books'
+import Contact from './components/Contact/Contact'
+import Home from './components/Home/Home'
 import Projects from './components/Projects'
 import Loading from './components/Loading'
 import './components/Home.scss'
@@ -27,14 +27,12 @@ function App() {
       <div className="App">
           {loading ? 
             <Loading loading={loading} />
-          :  
+            :  
              <>
-
-             {/* style={{zIndex: '100'}} */}
               <Header/>
 
-              <div className="container">
-                <div className="wrapper">
+              {/* <div className="container"> */}
+                {/* <div className="wrapper"> */}
                   <div className="home">
                     <Switch>
                       <Route exact path="/" component={Home} />
@@ -43,8 +41,8 @@ function App() {
                       <Route exact path="/contact" component={Contact} />
                     </Switch>
                   </div>
-                </div>
-              </div>
+                {/* </div> */}
+              {/* </div> */}
             </>
         }
        

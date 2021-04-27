@@ -1,15 +1,29 @@
 $red: #e20001;
 $black: #191919;
 
-.home-container {
-  width: 1440px;
-  min-width: 1440px;
+.container {
+  width: 1280px;
+  min-width: 1280px;
   margin: 0 auto;
-  // z-index: 101;
+
+  .wrapper {
+    padding: 0 48px;
+  }
+}
+.home-container {
+  width: 1280px;
+  min-width: 1280px;
+  margin: 0 auto;
+  
 }
 
 .home-wrapper {
 padding: 0;
+}
+
+.red {
+  font-weight: 600;
+  color: $red;
 }
 
 .hero {
@@ -22,8 +36,8 @@ padding: 0;
   display: flex;
   align-items:center;
   justify-content: center;
-  // margin: 0 24px;
-  height: 100vh;
+  margin: 0 24px;
+  max-height: 100vh;
 }    
 
 h1 {
@@ -79,10 +93,12 @@ button {
   display: flex;
   align-items: center;
   position: relative;
+  
 }
   button:focus {
     outline: none;
   }
+
   .arrow-icon {
     position: absolute;
     display: flex;
@@ -94,6 +110,7 @@ button {
     border-radius: 100px;
     left: 80px;
   }
+  
 .hero-images {
   width: 50%;
   height: 100vh;
