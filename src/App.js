@@ -8,7 +8,7 @@ import Contact from './components/Contact/Contact'
 import Home from './components/Home/Home'
 import Projects from './components/Projects'
 import Loading from './components/Loading'
-import './components/Home.scss'
+// import './components/Home.scss'
 
 
 function App() {
