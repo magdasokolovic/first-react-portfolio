@@ -36,11 +36,17 @@ export default function Contact() {
                     <Lottie 
                         options={defaultOptions}
                         height={400}
-                        width={620}
+                        width={560}
                     />
                 </div>
+                <div className="social-media-icons">
 
-          
+                    <a href="https://github.com/magdasokolovic" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/magda_sokol" target="_blank" rel="noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=4915204248662" target="_blank" rel="noreferrer"><i className="fab fa-whatsapp"></i></a>
+                </div>
+
+
             </div>
         </div>
     )

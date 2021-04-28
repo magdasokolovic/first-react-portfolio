@@ -7,6 +7,7 @@ $black: #191919;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 50px 0;
 }
 form {
     margin-top: 60px;
@@ -15,7 +16,7 @@ form {
 
 .form-control {
     
-    width: 600px;
+    width: 500px;
     background: transparent;
     border: none;
     outline: none;
@@ -56,3 +57,31 @@ form .submit:hover {
     background-color: darken($red, 10%);
     cursor: pointer;
 }
+
+//ICONS: 
+.social-media-icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: white;
+    margin-top: 16px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+
+
+    .fab {
+      color: black;
+      cursor: pointer;
+      margin: 0 12px;
+      transition: .3s ease-in-out;
+
+      &:hover {
+        background: $black;
+        color: white;
+        padding: 8px 24px;
+        border-radius: 4px;
+        
+      }
+    }
+  }

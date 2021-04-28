@@ -91,7 +91,7 @@ export default function Menu({state}) {
                                 </nav>
                                 <div ref={el => (info = el)} className="info">
                                     <h3>what I do:</h3>
-                                    <p>yoga, <span className="black">WebDev</span>, reading, dance horribly to techno music in my house, blablabla</p>
+                                    <p>yoga, <span className="black">WebDev</span>, reading, dancing horribly to techno music in my house, blablabla</p>
                                 </div>
 
                                 <div className="social-media-icons">
