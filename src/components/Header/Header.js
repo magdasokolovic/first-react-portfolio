@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import {withRouter, Link} from "react-router-dom"
 import Menu from '../Menu/Menu'
 import './Header.scss';
-//withRouter gives us an access to "history" prop, to determine whether url was changed
+//withRouter gives us an access to props.history,  which means the header can now redirect the user.
 
 const Header = ({history}) => {
     console.log(withRouter)

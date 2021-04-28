@@ -30,8 +30,6 @@ function App() {
              <>
               <Header/>
 
-              {/* <div className="container"> */}
-                {/* <div className="wrapper"> */}
                   <div className="home">
                     <Switch>
                       <Route exact path="/" component={Home} />
@@ -40,8 +38,7 @@ function App() {
                       <Route exact path="/contact" component={Contact} />
                     </Switch>
                   </div>
-                {/* </div> */}
-              {/* </div> */}
+                
             </>
         }
        

@@ -6,10 +6,10 @@ import Book from './Book'
 export default function Books() {
     const bookContainerStyle={
         display: 'flex',
+        justifyContent: 'space-between',
         flexWrap: 'no-wrap',
-        width: '1280px',
-        minWidth: '1280px',
-        margin: '60px 0',
+        maxWidth: '1280px',
+        margin: '60px auto',
         
     }
     return (

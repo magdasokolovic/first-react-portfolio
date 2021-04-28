@@ -9,17 +9,20 @@ export const CardWrapper = styled.div`
     perspective: 2000;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 `
 //motion for dragging the card:
 export const CardContainer = styled(motion.div)`
-    width: 260px;
-    height: 450px;
+    width: 250px;
+    height: 430px;
     padding-bottom: .7em;
+    /* margin-right: 1em; */
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
     border-radius: 20px;
     box-shadow: 0 2px 7px 1px rgba(31, 31, 31, 0.2);
     background-color: #191919;

@@ -60,7 +60,7 @@ function Home() {
                     <div className="hero-content-line">
                         <div className="hero-content-line-inner">
                         Welcome to my portfolio.
-                            </div>
+                        </div>
                       </div>
   
                       <div className="hero-content-line">
