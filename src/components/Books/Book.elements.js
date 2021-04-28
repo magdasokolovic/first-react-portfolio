@@ -6,17 +6,17 @@ import {motion} from "framer-motion";
 export const CardWrapper = styled.div`
     /* width: 100%; */
     //use perspective for 3D effect:
-    perspective: 2000;
+    /* perspective: 2000;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around; */
 `
 //motion for dragging the card:
 export const CardContainer = styled(motion.div)`
     width: 250px;
     height: 430px;
     padding-bottom: .7em;
-    /* margin-right: 1em; */
+  
 
     display: flex;
     flex-direction: column;
@@ -40,16 +40,14 @@ export const TopContainer = styled.div`
     position: relative;
     align-items: center;
     justify-content: flex-end;
-    padding: .8em 10px;
+    
 `
-
 
 export const MainText = styled.h1`
     color: white;
     text-transform: uppercase;
     margin: 0 2px;
     font-size: 46px;
-    /* z-index: 10; */
     font-weight: 800;
     overflow: hidden;
 `
@@ -63,12 +61,9 @@ export const ImageWrapper = styled.div`
     justify-content: center;
     position: relative;
 `
-//motion animation:
-export const ImageInner = styled(motion.div)`
+
+export const ImageInner = styled.div`
     width: auto;
-    height: 190px;
-    margin-right: 2em;
-    margin-top: 2em;
     user-select: none;
     margin: 0 auto;
 
@@ -80,12 +75,15 @@ export const ImageInner = styled(motion.div)`
         user-select: none;
         opacity: .5; 
         transition: all .5s ease-in-out;
+    
 
         &:hover {
             opacity: 1;
             border-radius: 5px;
-            width: 260px;
-            height: 450px;
+            width: 200;
+            height: auto;
+            display: grid;
+            place-content: center;
         }
     }
 `

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useMotionValue, useTransform } from "framer-motion";
-import {CardWrapper,
+import {
+    CardWrapper,
     CardContainer,
     TopContainer,
     MainText,
@@ -18,6 +19,7 @@ function Book({Author, Title, Image}) {
     const rotateX = useTransform(x, [-100, 100], [30, -30])
     const rotateY = useTransform(x, [-100, 100], [-30, 30])
 
+    const [isShown, setIsShown] = useState(false);
     return (
         < CardWrapper>
         {/*  z determines how much the card will pop out from the background */}
@@ -29,18 +31,26 @@ function Book({Author, Title, Image}) {
                 dragConstraints={{top: 0, left: 0, right: 0, bottom: 0}}
                 whileTap={{cursor: 'grabbing'}}>
                 <TopContainer>
-                    <ImageWrapper>
-                        <ImageInner >
+                    <ImageWrapper
+                        
+                    >
+                        <ImageInner 
+                        onMouseEnter={() => setIsShown(true)}
+                        onMouseLeave={() => setIsShown(false)}>
                             <img src={Image} alt={Title}/>
                         </ImageInner>
                     </ImageWrapper>
-                    <MainText>Drag me!</MainText>
-                </TopContainer>
 
+                    {!isShown && (
+                    <MainText>Drag me!</MainText>
+                    )}
+                </TopContainer>
+                    {!isShown && (
                 <BottomContainer>
                     <TitleText>{Title}</TitleText>
                     <AuthorText> by {Author}</AuthorText>
                 </BottomContainer>
+                )}
 
             </CardContainer>
         </ CardWrapper>
