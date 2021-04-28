@@ -1,0 +1,32 @@
+$red: #e20001;
+$black: #191919;
+header {
+    height: 70px;
+    .inner-header {
+      // z-indexes don't work if you don't define position!
+      position: relative;
+      z-index: 10;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .logo a {
+        font-weight: 700;
+        text-decoration: none;
+        color: $black;
+      }
+  
+      .menu {
+          
+        button {
+          border: none;
+          background: none;
+          outline: none;
+          cursor: pointer;
+          font-size: .8rem;
+          color: $black;
+        }
+      }
+    }
+}

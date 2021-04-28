@@ -2,8 +2,8 @@ import React, {useRef, useEffect} from 'react'
 import './Home.scss'
 import {TweenMax, TimelineLite, Power3} from 'gsap'
 import arrow from '../images/arrow-right.svg'
-import me from '../images/me.jpg';
-import me2 from '../images/me2.jpg'
+import me from '../images/Optimized-5.jpg';
+import me2 from '../images/Optimized-6.jpg'
 
 function Home() {
     let app = useRef(null);
@@ -58,29 +58,23 @@ function Home() {
   
                   <h1>
                     <div className="hero-content-line">
-                      <div className="hero-content-line-inner">
-                          Welcome to MAGDA's world
-                        </div>
+                        Welcome to my portfolio
                       </div>
   
                       <div className="hero-content-line">
-                        <div className="hero-content-line-inner">
-                          Scroll down for more
-                        </div>
+                        I build websites <span className="red">&</span>
                       </div>
   
   
                       <div className="hero-content-line">
-                        <div className="hero-content-line-inner">
-                          ...or not :)
-                        </div>
+                        and have a lot of fun with it
                       </div>
                   </h1>
   
-                  <p>Contact me for any important or unimportant reason</p>
+                  <p>Contact me for any <span className="red">!</span>important reason</p>
                   <div className="btn-row">
                     <button className="explore-button">
-                      Explore
+                    Explore my work
                       <div className="arrow-icon">
                         <img src={arrow} alt='arrow'/>
                       </div>

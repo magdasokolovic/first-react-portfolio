@@ -1,3 +1,6 @@
+$red: #e20001;
+$black: #191919;
+
 
 html {
     body {
@@ -8,12 +11,14 @@ html {
   }
   
   .hero {
+    width: 1440px;
+    min-width: 1440px;
     visibility: hidden;
     height: 100vh;
     .hero-container {
-      width: 1440px;
-      min-width: 1440px;
-      margin: 0 auto;
+        width: 1280px;
+        min-width: 1280px;
+  
         .hero-inner {
           display: flex;
           align-items:center;
@@ -25,7 +30,7 @@ html {
             .hero-content-inner {
               width: 400px;
               margin: 0 auto;
-              color: #323232;
+              color: $black;
               h1 {
                 font-weight: 500;
                 font-size: 32px;
@@ -75,7 +80,7 @@ html {
                     display: flex;
                     align-items:center;
                     justify-content: center;
-                    background: #007fff;
+                    background: $red;
                     height: 42px;
                     width: 42px;
                     border-radius: 100px;
@@ -87,6 +92,10 @@ html {
           }
           
         }
+        .red {
+            font-weight: 600;
+            color: $red;
+          }
         .hero-images {
           width: 50%;
           height: 100vh;
