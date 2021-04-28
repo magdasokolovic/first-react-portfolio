@@ -26,7 +26,8 @@ const Header = ({history}) => {
                 clicked: false, menuName: 'Menu'
             })
         })
-    })
+    }, [history])
+
     //click the button:
     const handleMenu = () => {
         //every time we click the button we want disabledMenu function to run:
@@ -72,7 +73,7 @@ const Header = ({history}) => {
                         <Link to="/">MAGDA</Link>
                     </div>
                     <div className="menu">
-                        <button disabled={disabled} onClick={handleMenu}>Menu</button>
+                        <button disabled={disabled} onClick={handleMenu}>{state.menuName}</button>
                     </div>
                 </div>
             </div>

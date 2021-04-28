@@ -34,7 +34,10 @@
 
 ***
 
-#### Miscalenous things I learned while working on the project: 
+### Things I learned while working on the project: 
+- use ::selection CSS selector for customizing text highlight color
+- use CSS ::placeholder Selector to give a styling to a placeholder text
+
 > Add punctuation to your alt text
 
    >> Eric Bailey reminds us that we should always finish our alt text with punctuation, such as a full stop/period. This makes the screen reader voice pause slightly before announcing the next words in the sequence, which feels a lot more natural. Example code:
@@ -42,5 +45,4 @@
 ```html
     <img src="puppy.jpg" alt="A golden retriever puppy wearing a tiny raincoat." />
 ```
-- use CSS ::placeholder Selector to give a styling to a placeholder text
 
