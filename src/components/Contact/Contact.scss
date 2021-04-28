@@ -37,8 +37,9 @@ form .submit {
     letter-spacing: 2px;
     height: 50px;
     margin-top: 20px;
+    border-radius: 2px;
 }
 form .submit:hover {
-    background-color: darken($red, 20%);
+    background-color: darken($red, 10%);
     cursor: pointer;
 }

@@ -4,7 +4,7 @@ import {motion} from "framer-motion";
 // $red: #e20001;
 // $black: #191919;
 export const CardWrapper = styled.div`
-    width: 100%;
+    /* width: 100%; */
     //use perspective for 3D effect:
     perspective: 2000;
     display: flex;
@@ -33,7 +33,7 @@ export const TopContainer = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    flex: 1.2;
+    flex: 1.5;
     position: relative;
     align-items: center;
     justify-content: flex-end;
@@ -90,7 +90,7 @@ export const ImageInner = styled(motion.div)`
 export const BottomContainer = styled.div`
     width: 90%;
     margin: 0 auto;
-    flex: 0.8;
+    flex: 0.5;
     padding: 0 1em;
     display: flex;
     flex-direction: column;

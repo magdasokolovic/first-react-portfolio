@@ -58,23 +58,29 @@ function Home() {
   
                   <h1>
                     <div className="hero-content-line">
-                        Welcome to my portfolio
+                        <div className="hero-content-line-inner">
+                        Welcome to my portfolio.
+                            </div>
                       </div>
   
                       <div className="hero-content-line">
+                          <div className="hero-content-line-inner">
                         I build websites <span className="red">&</span>
+                            </div>
                       </div>
   
   
                       <div className="hero-content-line">
+                          <div className="hero-content-line-inner">
                         and have a lot of fun with it
+                            </div>
                       </div>
                   </h1>
   
-                  <p>Contact me for any <span className="red">!</span>important reason</p>
+                  <p>Contact me for any <span className="red">!</span> important reason</p>
                   <div className="btn-row">
                     <button className="explore-button">
-                    Explore my work
+                        Explore my work
                       <div className="arrow-icon">
                         <img src={arrow} alt='arrow'/>
                       </div>

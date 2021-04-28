@@ -28,7 +28,7 @@ html {
           .hero-content {
             width: 50%;
             .hero-content-inner {
-              width: 400px;
+              width: 410px;
               margin: 0 auto;
               color: $black;
               h1 {
@@ -49,7 +49,7 @@ html {
                 margin-bottom: 56px;
               }
               .btn-row {
-                position: relative;
+                position: relative;                
                 &:before {
                   position: absolute;
                   content: '';
@@ -84,7 +84,7 @@ html {
                     height: 42px;
                     width: 42px;
                     border-radius: 100px;
-                    left: 80px;
+                    left: 130px;
                   }
                 }
               }
@@ -124,6 +124,8 @@ html {
                 left: 0;
                 bottom: 0;
                 width: 100%;
+                border-radius: 2px;
+
               }
             }
           }

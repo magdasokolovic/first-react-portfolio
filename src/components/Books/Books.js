@@ -9,7 +9,8 @@ export default function Books() {
         flexWrap: 'no-wrap',
         width: '1280px',
         minWidth: '1280px',
-        margin: '0 auto'
+        margin: '60px 0',
+        
     }
     return (
             <div className='container'>

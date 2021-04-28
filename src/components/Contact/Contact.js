@@ -14,6 +14,7 @@ export default function Contact() {
           preserveAspectRatio: "xMidYMid slice"
         }
       };
+      
     return (
         <div className='container'>
             <div className='wrapper'>
