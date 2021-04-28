@@ -18,30 +18,23 @@
 - [How To Code Animations in React.js with Greensock (GSAP) | Hero Section |](https://www.youtube.com/watch?v=H_VnkjiodO4list=UUqrxiLP9RHz2GxDJaZuTRBw&index=51)
 
 ***
-
-### Animated Menu comments:
+### Things I learned while working on the project: 
 - good idea to disable menu button after clicking on it for ~1.2seconds and then enable it again (better user experience)
 - z-indexes don't work unless you define a position
 - in order for Header element to have an access to props.history we can use withRouter
-***
-
-### Hero Section comments: 
-##### gsap: 
-- in terms of easing use Power3
-- TimelineLite allows to add the timeline to animations. (first come the photos, only then the text)
-- 'to' - defines final state, 'from' defines initial state
-- TweenMax is for animating just 1 item (in my case the whole hero section, with TweenMax we make the section visible)
-
-***
-
-### Things I learned while working on the project: 
 - use ::selection CSS selector for customizing text highlight color
 - use CSS ::placeholder Selector to give a styling to a placeholder text
+- add punctuation to your alt text:
+>>we should always finish our alt text with punctuation, such as a full stop/period. This makes the screen reader voice pause slightly before announcing the next words in the sequence, which feels a lot more natural.
+***
+##### gsap: 
+- in terms of easing use Power3
+- TimelineLite allows to add the timeline to animations. (in my hero section first come the photos, only then the content to the left)
+- 'to' - defines final state, 'from' defines initial state
+- TweenMax is for animating just 1 item (in my case the whole hero section, with TweenMax we make the section visible)
+##### framer-motion: 
+- drag effect(https://www.framer.com/api/motion/gestures/#drag)
+***
 
-> Add punctuation to your alt text:
-   >> we should always finish our alt text with punctuation, such as a full stop/period. This makes the screen reader voice pause slightly before announcing the next words in the sequence, which feels a lot more natural. Example code:
 
-```html
-    <img src="puppy.jpg" alt="A golden retriever puppy wearing a tiny raincoat." />
-```
 
