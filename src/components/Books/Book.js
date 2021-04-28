@@ -19,7 +19,10 @@ function Book({Author, Title, Image}) {
     const rotateX = useTransform(x, [-100, 100], [30, -30])
     const rotateY = useTransform(x, [-100, 100], [-30, 30])
 
+
+    // use Hook to remove the text on hoving over the image:
     const [isShown, setIsShown] = useState(false);
+
     return (
         < CardWrapper>
         {/*  z determines how much the card will pop out from the background */}
@@ -31,20 +34,20 @@ function Book({Author, Title, Image}) {
                 dragConstraints={{top: 0, left: 0, right: 0, bottom: 0}}
                 whileTap={{cursor: 'grabbing'}}>
                 <TopContainer>
-                    <ImageWrapper
-                        
-                    >
+                    <ImageWrapper>
                         <ImageInner 
-                        onMouseEnter={() => setIsShown(true)}
-                        onMouseLeave={() => setIsShown(false)}>
+                            onMouseEnter={() => setIsShown(true)}
+                            onMouseLeave={() => setIsShown(false)}>
                             <img src={Image} alt={Title}/>
                         </ImageInner>
                     </ImageWrapper>
 
+                    {/* Removing the text if I hover on the image: */}
                     {!isShown && (
                     <MainText>Drag me!</MainText>
                     )}
                 </TopContainer>
+                
                     {!isShown && (
                 <BottomContainer>
                     <TitleText>{Title}</TitleText>

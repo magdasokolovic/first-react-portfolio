@@ -7,13 +7,16 @@ import me from '../images/Optimized-5.jpg';
 import me2 from '../images/Optimized-6.jpg'
 
 function Home() {
-    let app = useRef(null);
+  // referencing DOM elements with useRef
+    let hero = useRef(null);
     let images = useRef(null);
     let content = useRef(null);
+    //once the entire page is loaded the timeline will wait .2s
     let tl = new TimelineLite({delay: .2})
   
   
     useEffect(() => {
+      // targets:
       const firstImage = images.firstElementChild;
       const secondImage = images.lastElementChild;
   
@@ -25,39 +28,44 @@ function Home() {
       // 'to' - defines final state, 'from' defines initial state
   
       // removing initial flash, at the beginning the visibility is hidden: 
-      TweenMax.to(app, 0, {css: {visibility: 'visible'}})
+      //the entire hero section is hidden until all dom elements are loaded
+      // TweenMax makes the dom visible right away
+              // TARGET, DURATION, CONFIGURATION:
+      TweenMax.to(hero, 0, {css: {visibility: 'visible'}})
   
   
-      // Image Animation:
+      // IMAGE ANIMATION:
+      ////   target      duration, configuration,                
       tl.from(firstImage, 1.2, {y: 1280, ease: Power3.easeOut}, 'start')
-      //// duration: 2s, {}, delay: .2s
+      //in order to create zoom-out(scale) effect I target separately the actual image:
         .from(firstImage.firstElementChild, 2, {scale: 1.6, ease: Power3.easeOut}, .2)
         .from(secondImage, 1.2, {y: 1280, ease: Power3.easeOut}, .2)
         .from(secondImage.firstElementChild, 2, {scale: 1.6, ease: Power3.easeOut}, .2)
   
-       //Content animation (headline plus button): 
-  
-       tl.staggerFrom([headlineFirst.children,headlineSecond.children, headlineThird.children], 1,
+       //CONTENT ANIMATION: 
+       tl.staggerFrom([headlineFirst.children, headlineSecond.children, headlineThird.children], 1,
         {
           y: 44,
           ease: Power3.easeOut,
           delay: .8
+          // .15 seconds  = achieving the staggeting (domino) effect:
         }, .15, 'start')
-          // syncing two timelines with any matching string , here: 'start'
+          // syncing two timelines with any matching string , here: 'start'. For 2 timelines to work together
           .from(contentP, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1.4)
           .from(contentButton, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1.6)
   
-      //adding dependencies to useEffect. It is dependent on timeline variable (called here tl)
+      //useEffectis dependent on timeline variable (called here tl)
     })
   
     return (
-      <div className="hero" ref={el => app = el}>
-          <div className="hero-container">
+      <div className="hero" ref={el => hero = el}>
+        <div className="hero-container">
             <div className="hero-inner">
               <div className="hero-content">
                 <div className="hero-content-inner" ref={el => content = el}>
   
                   <h1>
+                    {/* hero-content-line is not moving on animation, but hero-content-line-inner IS */}
                     <div className="hero-content-line">
                         <div className="hero-content-line-inner">
                         Welcome to my portfolio.
@@ -67,18 +75,18 @@ function Home() {
                       <div className="hero-content-line">
                           <div className="hero-content-line-inner">
                         I build websites <span className="red">&</span>
-                            </div>
+                          </div>
                       </div>
   
   
                       <div className="hero-content-line">
                           <div className="hero-content-line-inner">
-                        and have a lot of fun with it
-                            </div>
+                        have a lot of fun with it
+                          </div>
                       </div>
                   </h1>
   
-                  <p>Contact me for any <span className="red">!</span> important reason</p>
+                  <p>I have no idea what to say here</p>
 
                   <div className="btn-row">
                     <button className="explore-button">

@@ -1,14 +1,14 @@
 $red: #e20001;
 $black: #191919;
 
-// hamburger menu/navigation: 
 .hamburger-menu {
     display: none;
+    position: fixed;
+    // we set z-index for a menu to show when the menu is open
     z-index: 9;
     top: 0;
     bottom: 0;
     left: 0;
-    position: fixed;
     height: 100%;
     width: 100%;
 
@@ -22,13 +22,14 @@ $black: #191919;
       height: 100%;
       width: 100%;
       background-color: $black;
+      // low z-index as black background is staying behind
       z-index: -1;
     }
     .menu-layer {
       position: relative;
       background-color: $red;
       height: 100%;
-      // hidden overflow is working like a "mask"
+      // hidden overflow is working like a "mask" - we see the menu only after it slides down 
       overflow: hidden;
       
       
@@ -41,42 +42,17 @@ $black: #191919;
           position: relative;
           top: 200px;
 
-          nav {
-            display: block;
-            ul {
-              padding: 0;
-              margin: 0;
-              li {
-                list-style: none;
-                font-size: 6rem;
-                font-weight: 700;
-                cursor: pointer;
-                height: 135px;
-                overflow: hidden;
-                position: relative;
-                width: 700px;
-                a {
-                  position: absolute;
-                  color: white;
-                  text-decoration: none;
-                  &:hover {
-                    color: $black;
-                  }
-                }
-              }
-            }
-          }
-
           .info {
             color: white;
             width: 300px;
             h3 {
-              font-size: 1.2rem;
+              font-size: 2rem;
               margin: 8px auto;
             }
             p {
               margin: 0 auto;
-              font-size: .8rem;
+              font-size: 1rem;
+              font-weight: 500;
             }
           }
         }
@@ -85,21 +61,22 @@ $black: #191919;
           display: flex;
           justify-content: space-between;
           align-items: stretch;
+
           position: absolute;
           bottom: -80px;
           color: white;
           margin-top: 16px;
           font-size: 1.5rem;
-          font-weight: 600px;
+          font-weight: 600;
           
 
 
           .fab {
-           
             color: black;
             cursor: pointer;
-            margin-right: 12px;
+            margin: 0 12px;
             transition: .3s ease-in-out;
+
             &:hover {
               background: $black;
               color: white;
@@ -107,6 +84,33 @@ $black: #191919;
               border-radius: 4px;
               
             }
+          }
+        }
+      }
+    }
+  }
+
+  // defining a nav tag:
+  nav {
+    display: block;
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        list-style: none;
+        font-size: 6rem;
+        font-weight: 700;
+        cursor: pointer;
+        height: 135px;
+        overflow: hidden;
+        position: relative;
+        width: 700px;
+        a {
+          position: absolute;
+          color: white;
+          text-decoration: none;
+          &:hover {
+            color: $black;
           }
         }
       }

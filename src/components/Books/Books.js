@@ -17,7 +17,7 @@ export default function Books() {
                 <div className='wrapper'> 
  
             
-                    <p>Books that I recommend:</p>
+                    <p>Books I recommend:</p>
                     <div className="books-container" style={bookContainerStyle}>
                         {BooksData.map(book => (
                             <Book 

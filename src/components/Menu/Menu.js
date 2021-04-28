@@ -2,6 +2,7 @@ import React, {useEffect, useRef} from 'react'
 import {Link} from 'react-router-dom'
 import gsap from 'gsap';
 import './Menu.scss'
+import {staggerReveal, fadeInUp, staggerText, handleHover, handleHoverExit} from './MenuAnimations'
 
 
 export default function Menu({state}) {
@@ -17,7 +18,7 @@ export default function Menu({state}) {
     // useEffect to be able to toggle the menu back and forth: 
     useEffect(() => {
         if (state.clicked === false) {
-            // close the menu:
+            // CLOSE MENU:
             gsap.to([revealMenu, revealMenuBackground], {
                 duration: .8,
                 height: 0,
@@ -28,7 +29,7 @@ export default function Menu({state}) {
                     amount: 0.07
                 }
             })
-            //menu is a parent of revealMenu & revealMenuBackground, duration here has to be londer the children menu
+            //menu is a parent element of revealMenu & revealMenuBackground, duration here has to be londer than children menu
             gsap.to(menu, {
                 duration: 1,
                 css: {
@@ -37,9 +38,10 @@ export default function Menu({state}) {
             })
             
         } 
-        // open the menu. Condition after OR operator means: close also on the initial screen
-        else if (state.clicked === true ||
-             state.clicked === true && state.initial === null) {
+
+        // OPEN THE MENU:. 
+        else if (state.clicked === true || 
+            state.clicked === true  && state.initial === null) {
             //open the menu: 
             gsap.to(menu, {
                 duration: 0,
@@ -47,85 +49,58 @@ export default function Menu({state}) {
                     display: 'block'
                 }
             })
+            //Allow menu to have the height of 100%:
             gsap.to([revealMenuBackground, revealMenu], {
                 duration: 0,
                 opacity: 1,
                 height: "100%"
             })
             staggerReveal(revealMenuBackground, revealMenu);
-            fadeInUp(info)
-            staggerText(line1, line2, line3)
+            fadeInUp(info);
+            staggerText(line1, line2, line3);
         }
-    }, [state]) // use dependency [state] so we wait until the state changes until the effect works
-    // functions for animation:
-    //for background:
-    const staggerReveal = (node1, node2) => {
-        gsap.from([node1, node2], {
-            duration: .8,
-            height: 0,
-            transformOrigin: 'right top', 
-            skewY: 2,
-            ease: 'power3.inOut',
-            stagger: {
-                amount: .1
-            }
-        })
-    }
-    // for the info section on the right:
-    const fadeInUp = (node) => {
-        gsap.from(node, {
-                y: 60,
-                duration: 1,
-                delay: .2,
-                opacity: 0,
-                ease: 'power3.inOut'
-        })
-    }
-
-    // function for navigation items:
-    const staggerText = (node1, node2, node3) => {
-        gsap.from([node1, node2, node3], {
-            duration: .8,
-            y: 100,
-            delay: .1,
-            ease: 'power3.inOut',
-            stagger: {
-                amount: .3
-            }
-        })
-    }
-
+    }, [state]) // use dependency [state] so we wait until the state has changed until the effect works
 
     return (
         <div ref={el => (menu = el)} className="hamburger-menu">
-            
             <div ref={el => (revealMenuBackground = el)} className="menu-secondary-background-color"></div>
+                <div ref={el => (revealMenu = el)} className="menu-layer">
+                    <div className="container">
+                        <div className="wrapper">
+                            <div className="menu-links">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <Link
+                                            onMouseEnter={e=>handleHover(e)}
+                                            onMouseOut={e=>handleHoverExit(e)}
+                                            ref={el => (line1 = el)} to="./books">Books</Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                            onMouseEnter={e=>handleHover(e)}
+                                            onMouseOut={e=>handleHoverExit(e)}
+                                            ref={el => (line2 = el)} to="./projects">Projects</Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                            onMouseEnter={e=>handleHover(e)}
+                                            onMouseOut={e=>handleHoverExit(e)}
+                                            ref={el => (line3 = el)} to="./contact">Contact</Link>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div ref={el => (info = el)} className="info">
+                                    <h3>what I do:</h3>
+                                    <p>yoga, webdev, reading, partying, blablabla</p>
+                                </div>
 
-            <div ref={el => (revealMenu = el)} className="menu-layer">
-                <div className="container">
-                    <div className="wrapper">
-                        <div className="menu-links">
-                            <nav>
-                                <ul>
-                                    <li><Link ref={el => (line1 = el)} to="./books">Books</Link></li>
-                                    <li><Link ref={el => (line2 = el)} to="./projects">Projects</Link></li>
-                                    <li><Link ref={el => (line3 = el)} to="./contact">Contact</Link></li>
-                                </ul>
-                            </nav>
-                            <div ref={el => (info = el)} className="info">
-                                <h3>what I do</h3>
-                                <p>yoga, webdev, reading, partying, blablabla</p>
-                            </div>
+                                <div className="social-media-icons">
 
-                            <div className="social-media-icons">
-                                <Link to="https://github.com/magdasokolovic" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></Link>
-                                <Link to="https://twitter.com/magda_sokol" target="_blank" rel="noreferrer"><i class="fab fa-twitter"></i></Link>
-                                <Link to="https://api.whatsapp.com/send?phone=4915204248662" target="_blank" rel="noreferrer"><i className="fab fa-whatsapp"></i></Link>
-
-                                {/* <a href="https://github.com/magdasokolovic" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
-                                <a href="https://twitter.com/magda_sokol" target="_blank" rel="noreferrer"><i class="fab fa-twitter"></i></a>
-                                <a href="https://api.whatsapp.com/send?phone=4915204248662" target="_blank" rel="noreferrer"><i className="fab fa-whatsapp"></i></a> */}
-                            </div>
+                                    <a href="https://github.com/magdasokolovic" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
+                                    <a href="https://twitter.com/magda_sokol" target="_blank" rel="noreferrer"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://api.whatsapp.com/send?phone=4915204248662" target="_blank" rel="noreferrer"><i className="fab fa-whatsapp"></i></a>
+                                </div>
                         </div>
                     </div>
                 </div>

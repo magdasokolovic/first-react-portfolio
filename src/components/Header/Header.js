@@ -1,14 +1,13 @@
 import React, {useState, useEffect} from "react";
 import {withRouter, Link} from "react-router-dom"
+//withRouter gives us an access to props.history,  which means the header can now redirect the user, we can determine if url has been changed
 import Menu from '../Menu/Menu'
 import './Header.scss';
-//withRouter gives us an access to props.history,  which means the header can now redirect the user.
 
 const Header = ({history}) => {
-    console.log(withRouter)
     //State for menu button:
     const [state, setState] = useState({
-        // initial represents the initial load of the webiste, runs only 1 time:
+        // initial represents the initial load of the website, runs only 1 time:
         initial: false,
         //when we click on the hamburger menu: 
         clicked: null,
@@ -30,10 +29,9 @@ const Header = ({history}) => {
     })
     //click the button:
     const handleMenu = () => {
-        //every time we click the buttonv we want disabledMenu function to run
+        //every time we click the button we want disabledMenu function to run:
         disabledMenu()
         //This runs only once on the very first loading:
-        // INITIAL LOAD: 
         if  (state.initial === false) {
             setState({
                 initial: null,
@@ -41,7 +39,7 @@ const Header = ({history}) => {
                 menuName: "Close"
             })
         } 
-        /// the next conditions are toggle menu: 
+        /// the next two conditions are for toggle menu: 
         else if (state.clicked === true) {
             setState({
                 // toggle: 
@@ -66,22 +64,22 @@ const Header = ({history}) => {
     }
 
   return (
-  <header>
-      <div className="container">
-          <div className="wrapper">
-              <div className="inner-header">
-                  <div className="logo">
-                      <Link to="/">MAGDA</Link>
-                  </div>
-                  <div className="menu">
-                      <button disabled={disabled} onClick={handleMenu}>Menu</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-        {/* passing state as a prop to access it in Menu component: */}
-      <Menu state={state}/>
-  </header>
+    <header>
+        <div className="container">
+            <div className="wrapper">
+                <div className="inner-header">
+                    <div className="logo">
+                        <Link to="/">MAGDA</Link>
+                    </div>
+                    <div className="menu">
+                        <button disabled={disabled} onClick={handleMenu}>Menu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            {/* passing state as a prop to access it in Menu component: */}
+        <Menu state={state}/>
+    </header>
   )
 };
 export default withRouter(Header);

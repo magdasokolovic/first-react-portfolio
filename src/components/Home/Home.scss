@@ -22,7 +22,7 @@ html {
         .hero-inner {
           display: flex;
           align-items:center;
-          justify-content: center;
+          justify-content: space-between;
           margin: 0 24px;
           height: 100vh;
           .hero-content {
@@ -37,7 +37,7 @@ html {
                 margin-bottom: 24px;
                 .hero-content-line {
                   margin: 0;
-                  height: 50px;
+                  height: 44px;
                   overflow: hidden;
                 }
               }
@@ -85,6 +85,7 @@ html {
                     width: 42px;
                     border-radius: 100px;
                     left: 130px;
+                    transform-origin: center center;
                   }
                 }
               }

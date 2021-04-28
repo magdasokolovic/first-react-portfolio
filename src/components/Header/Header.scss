@@ -1,9 +1,9 @@
 $red: #e20001;
 $black: #191919;
+
 header {
     height: 70px;
     .inner-header {
-      // z-indexes don't work if you don't define position!
       position: relative;
       z-index: 10;
       height: 70px;
