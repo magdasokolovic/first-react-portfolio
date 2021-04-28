@@ -1,4 +1,5 @@
 import React, {useRef, useEffect} from 'react'
+import {Link} from 'react-router-dom'
 import './Home.scss'
 import {TweenMax, TimelineLite, Power3} from 'gsap'
 import arrow from '../images/arrow-right.svg'
@@ -23,7 +24,7 @@ function Home() {
       const contentButton = content.children[2];
       // 'to' - defines final state, 'from' defines initial state
   
-      // removing initial flash: 
+      // removing initial flash, at the beginning the visibility is hidden: 
       TweenMax.to(app, 0, {css: {visibility: 'visible'}})
   
   
@@ -34,7 +35,7 @@ function Home() {
         .from(secondImage, 1.2, {y: 1280, ease: Power3.easeOut}, .2)
         .from(secondImage.firstElementChild, 2, {scale: 1.6, ease: Power3.easeOut}, .2)
   
-       //Content animation: 
+       //Content animation (headline plus button): 
   
        tl.staggerFrom([headlineFirst.children,headlineSecond.children, headlineThird.children], 1,
         {
@@ -46,7 +47,7 @@ function Home() {
           .from(contentP, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1.4)
           .from(contentButton, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1.6)
   
-      //adding dependencies to useEffect. It is dependent on timeline variable
+      //adding dependencies to useEffect. It is dependent on timeline variable (called here tl)
     })
   
     return (
@@ -78,14 +79,16 @@ function Home() {
                   </h1>
   
                   <p>Contact me for any <span className="red">!</span> important reason</p>
+
                   <div className="btn-row">
                     <button className="explore-button">
                         Explore my work
-                      <div className="arrow-icon">
+                      <Link to="/projects" className="arrow-icon">
                         <img src={arrow} alt='arrow'/>
-                      </div>
+                      </Link>
                     </button>
-                  </div>
+                  </div >
+
                 </div>
               </div>
               <div className="hero-images">

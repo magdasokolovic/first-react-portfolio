@@ -29,7 +29,7 @@ html {
             width: 50%;
             .hero-content-inner {
               width: 410px;
-              margin: 0 auto;
+              margin: 0 auto 200px;
               color: $black;
               h1 {
                 font-weight: 500;
@@ -37,13 +37,13 @@ html {
                 margin-bottom: 24px;
                 .hero-content-line {
                   margin: 0;
-                  height: 44px;
+                  height: 50px;
                   overflow: hidden;
                 }
               }
               p {
                 font-size: 14px;
-                line-height: 24px;
+                line-height: 25px;
                 font-weight: 300;
                 padding-right: 48px;
                 margin-bottom: 56px;

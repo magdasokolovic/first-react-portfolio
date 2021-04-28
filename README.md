@@ -8,6 +8,7 @@
 - Animating elements: [framer motion](https://www.framer.com/motion/)
 - CSS styling: [sass](https://sass-lang.com/)
 - Animations: [lottieFiles](https://lottiefiles.com/)
+- Icons: [FontAwesome](https://fontawesome.com/)
 
 - - -
 
@@ -18,11 +19,14 @@
 
 ***
 
+### Animated Menu details:
+
+***
 #### Miscalenous things I learned while working on the project: 
 > Add punctuation to your alt text
 
     Eric Bailey reminds us that we should always finish our alt text with punctuation, such as a full stop/period. This makes the screen reader voice pause slightly before announcing the next words in the sequence, which feels a lot more natural. Example code:
-    
+
 ``` html
     <img src="puppy.jpg" alt="A golden retriever puppy wearing a tiny raincoat." />
 ```

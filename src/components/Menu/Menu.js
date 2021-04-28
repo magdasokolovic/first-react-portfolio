@@ -114,13 +114,17 @@ export default function Menu({state}) {
                             </nav>
                             <div ref={el => (info = el)} className="info">
                                 <h3>what I do</h3>
-                                <p>yoga, webdev, reading, partying, hahahaha</p>
+                                <p>yoga, webdev, reading, partying, blablabla</p>
                             </div>
 
                             <div className="social-media-icons">
-                                <Link to="https://www.facebook.com/magda.sokolovic" target="_blank"><i className="fab fa-facebook"></i></Link>
-                                <Link to="https://www.instagram.com/magda.sokolovic/" target="_blank"><i className="fab fa-instagram"></i></Link>
-                                <Link to="https://api.whatsapp.com/send?phone=4915204248662" target="_blank"><i className="fab fa-whatsapp"></i></Link>
+                                <Link to="https://github.com/magdasokolovic" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></Link>
+                                <Link to="https://twitter.com/magda_sokol" target="_blank" rel="noreferrer"><i class="fab fa-twitter"></i></Link>
+                                <Link to="https://api.whatsapp.com/send?phone=4915204248662" target="_blank" rel="noreferrer"><i className="fab fa-whatsapp"></i></Link>
+
+                                {/* <a href="https://github.com/magdasokolovic" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
+                                <a href="https://twitter.com/magda_sokol" target="_blank" rel="noreferrer"><i class="fab fa-twitter"></i></a>
+                                <a href="https://api.whatsapp.com/send?phone=4915204248662" target="_blank" rel="noreferrer"><i className="fab fa-whatsapp"></i></a> */}
                             </div>
                         </div>
                     </div>
