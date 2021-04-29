@@ -74,19 +74,22 @@ export default function Menu({state}) {
                                             <Link
                                             onMouseEnter={e=>handleHover(e)}
                                             onMouseOut={e=>handleHoverExit(e)}
-                                            ref={el => (line1 = el)} to="./books">Books</Link>
+                                            ref={el => (line1 = el)} to="./books">Books
+                                            </Link>
                                         </li>
                                         <li>
                                             <Link
                                             onMouseEnter={e=>handleHover(e)}
                                             onMouseOut={e=>handleHoverExit(e)}
-                                            ref={el => (line2 = el)} to="./projects">Projects</Link>
+                                            ref={el => (line2 = el)} to="./projects">Projects
+                                            </Link>
                                         </li>
                                         <li>
                                             <Link
                                             onMouseEnter={e=>handleHover(e)}
                                             onMouseOut={e=>handleHoverExit(e)}
-                                            ref={el => (line3 = el)} to="./contact">Contact</Link>
+                                            ref={el => (line3 = el)} to="./contact">Contact
+                                            </Link>
                                         </li>
                                     </ul>
                                 </nav>

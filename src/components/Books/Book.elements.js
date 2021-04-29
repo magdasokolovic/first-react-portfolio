@@ -1,15 +1,8 @@
 import styled from 'styled-components';
 import {motion} from "framer-motion";
 
-// $red: #e20001;
-// $black: #191919;
 export const CardWrapper = styled.div`
-    /* width: 100%; */
-    //use perspective for 3D effect:
-    /* perspective: 2000;
-    display: flex;
-    align-items: center;
-    justify-content: space-around; */
+   
 `
 //motion for dragging the card:
 export const CardContainer = styled(motion.div)`

@@ -14,6 +14,7 @@ const Header = ({history}) => {
         // when the menu is open menuName will change  into "close"
         menuName: 'Menu'
     })
+    
     //state for disabled button:
     const [disabled, setDisabled] = useState(false)
 

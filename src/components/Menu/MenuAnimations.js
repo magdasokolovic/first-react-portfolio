@@ -1,6 +1,7 @@
 
 import gsap from "gsap";
 //ANIMATION FUNCTIONS:
+
     //for background:
 export const staggerReveal = (node1, node2) => {
         gsap.from([node1, node2], {

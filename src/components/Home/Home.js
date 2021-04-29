@@ -1,6 +1,7 @@
 import React, {useRef, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import './Home.scss'
+
 import {TweenMax, TimelineLite, Power3} from 'gsap'
 import arrow from '../images/arrow-right.svg'
 import me from '../images/Optimized-5.jpg';
@@ -54,10 +55,11 @@ function Home() {
           .from(contentP, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1.4)
           .from(contentButton, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1.6)
   
-      //useEffectis dependent on timeline variable (called here tl)
+      //useEffectis dependent on timeline variable (called here tl). 
     })
   
     return (
+
       <div className="hero" ref={el => hero = el}>
         <div className="hero-container">
             <div className="hero-inner">

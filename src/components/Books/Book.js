@@ -20,7 +20,7 @@ function Book({Author, Title, Image}) {
     const rotateY = useTransform(x, [-100, 100], [-30, 30])
 
 
-    // use Hook to remove the text on hoving over the image:
+    // use Hook to remove the text on hovering over the image:
     const [isShown, setIsShown] = useState(false);
 
     return (
