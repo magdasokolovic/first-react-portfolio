@@ -53,13 +53,17 @@ $black: #191919;
               margin: 0 auto;
               font-size: 1rem;
               font-weight: 500;
+              &::selection {
+                background-color:$black;
+                color: white;
+              }
             }
           }
         }
         .black {
           color: #191919;
           font-weight: 900;
-          text-decoration: overline;
+          text-decoration: dotted;
         }
         .social-media-icons {
           display: flex;

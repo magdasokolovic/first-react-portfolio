@@ -14,6 +14,7 @@ export default function Menu({state}) {
     let line2 = useRef(null)
     let line3 = useRef(null)
     let info = useRef(null)
+    
 
     // useEffect to be able to toggle the menu back and forth: 
     useEffect(() => {
@@ -23,7 +24,7 @@ export default function Menu({state}) {
                 duration: .8,
                 height: 0,
                 ease: 'power3.inOut',
-                // without stagger you cannot see revealMenuBackground - black background
+                // without stagger you cannot see revealMenuBackground - (black one)
                 stagger: {
                     // here amount means delay:
                     amount: 0.07
@@ -58,7 +59,7 @@ export default function Menu({state}) {
             fadeInUp(info);
             staggerText(line1, line2, line3);
         }
-    }, [state]) // use dependency [state] so we wait until the state has changed until the effect works
+    }, [state]) // use dependency [state] to watch changes
 
     return (
         <div ref={el => (menu = el)} className="hamburger-menu">

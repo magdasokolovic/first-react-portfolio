@@ -11,7 +11,7 @@ const Header = ({history}) => {
         initial: false,
         //when we click on the hamburger menu: 
         clicked: null,
-        // menuName will change when the menu is open into "close"
+        // when the menu is open menuName will change  into "close"
         menuName: 'Menu'
     })
     //state for disabled button:
