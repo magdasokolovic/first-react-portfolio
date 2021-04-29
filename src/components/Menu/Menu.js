@@ -40,7 +40,7 @@ export default function Menu({state}) {
         } 
 
         // OPEN THE MENU:. 
-        else if (state.clicked === true || state.clicked === true && state.initial === null) {
+        else if (state.clicked === true || state.initial === null) {
             //open the menu: 
             gsap.to(menu, {
                 duration: 0,

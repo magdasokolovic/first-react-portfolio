@@ -46,7 +46,6 @@ export default function Contact() {
                     <a href="https://api.whatsapp.com/send?phone=4915204248662" target="_blank" rel="noreferrer"><i className="fab fa-whatsapp"></i></a>
                 </div>
 
-
             </div>
         </div>
     )

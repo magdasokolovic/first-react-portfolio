@@ -1,9 +1,6 @@
 $red: #e20001;
 $black: #191919;
-.black {
-  color: #191919;
-  font-weight: 900;
-}
+
 .hamburger-menu {
     display: none;
     position: fixed;
@@ -59,7 +56,11 @@ $black: #191919;
             }
           }
         }
-
+        .black {
+          color: #191919;
+          font-weight: 900;
+          text-decoration: overline;
+        }
         .social-media-icons {
           display: flex;
           justify-content: space-between;
