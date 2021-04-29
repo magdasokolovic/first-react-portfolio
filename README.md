@@ -26,7 +26,7 @@
 - use ::selection CSS selector for customizing text highlight color
 - use CSS ::placeholder Selector to give a styling to a placeholder text
 - add punctuation to your alt text:
->>we should always finish our alt text with punctuation, such as a full stop/period. This makes the screen reader voice pause slightly before announcing the next words in the sequence, which feels a lot more natural.
+>we should always finish our alt text with punctuation, such as a full stop/period. This makes the screen reader voice pause slightly before announcing the next words in the sequence, which feels a lot more natural.
 
 ***
 
@@ -42,6 +42,11 @@
 - drag effect(https://www.framer.com/api/motion/gestures/#drag)
 
 ***
+
+// for deployment add to json:
+// "homepage": ".",
+// "predeploy": "npm run build",
+// "deploy": "gh-pages -d build"
 
 
 

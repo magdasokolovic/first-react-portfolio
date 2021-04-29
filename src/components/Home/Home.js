@@ -14,9 +14,10 @@ function Home() {
     let content = useRef(null);
     //once the entire page is loaded the timeline will wait .2s
     let tl = new TimelineLite({delay: .2})
-  
+   
   
     useEffect(() => {
+
       // targets:
       const firstImage = images.firstElementChild;
       const secondImage = images.lastElementChild;
