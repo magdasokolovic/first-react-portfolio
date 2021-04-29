@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/magdasokolovic/first-react-portfolio/static/css/main.350cf5e7.chunk.css",
+    "main.js": "/magdasokolovic/first-react-portfolio/static/js/main.53a026f0.chunk.js",
+    "main.js.map": "/magdasokolovic/first-react-portfolio/static/js/main.53a026f0.chunk.js.map",
+    "runtime-main.js": "/magdasokolovic/first-react-portfolio/static/js/runtime-main.378d12c0.js",
+    "runtime-main.js.map": "/magdasokolovic/first-react-portfolio/static/js/runtime-main.378d12c0.js.map",
+    "static/js/2.597e21ce.chunk.js": "/magdasokolovic/first-react-portfolio/static/js/2.597e21ce.chunk.js",
+    "static/js/2.597e21ce.chunk.js.map": "/magdasokolovic/first-react-portfolio/static/js/2.597e21ce.chunk.js.map",
+    "index.html": "/magdasokolovic/first-react-portfolio/index.html",
+    "static/css/main.350cf5e7.chunk.css.map": "/magdasokolovic/first-react-portfolio/static/css/main.350cf5e7.chunk.css.map",
+    "static/js/2.597e21ce.chunk.js.LICENSE.txt": "/magdasokolovic/first-react-portfolio/static/js/2.597e21ce.chunk.js.LICENSE.txt",
+    "static/media/Optimized-5.011f4d59.jpg": "/magdasokolovic/first-react-portfolio/static/media/Optimized-5.011f4d59.jpg",
+    "static/media/Optimized-6.0d1e68fa.jpg": "/magdasokolovic/first-react-portfolio/static/media/Optimized-6.0d1e68fa.jpg",
+    "static/media/arrow-right.f0a4dc91.svg": "/magdasokolovic/first-react-portfolio/static/media/arrow-right.f0a4dc91.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.378d12c0.js",
+    "static/js/2.597e21ce.chunk.js",
+    "static/css/main.350cf5e7.chunk.css",
+    "static/js/main.53a026f0.chunk.js"
+  ]
+}
