@@ -18,6 +18,7 @@
 - [How To Code Animations in React.js with Greensock (GSAP) | Hero Section |](https://www.youtube.com/watch?v=H_VnkjiodO4list=UUqrxiLP9RHz2GxDJaZuTRBw&index=51)
 
 ***
+
 ### Things I learned while working on the project: 
 - good idea to disable menu button after clicking on it for ~1.2seconds and then enable it again (better user experience)
 - z-indexes don't work unless you define a position
@@ -26,14 +27,20 @@
 - use CSS ::placeholder Selector to give a styling to a placeholder text
 - add punctuation to your alt text:
 >>we should always finish our alt text with punctuation, such as a full stop/period. This makes the screen reader voice pause slightly before announcing the next words in the sequence, which feels a lot more natural.
+
 ***
-##### gsap: 
+
+#### gsap: 
 - in terms of easing use Power3
 - TimelineLite allows to add the timeline to animations. (in my hero section first come the photos, only then the content to the left)
 - 'to' - defines final state, 'from' defines initial state
 - TweenMax is for animating just 1 item (in my case the whole hero section, with TweenMax we make the section visible)
-##### framer-motion: 
+
+***
+
+#### framer-motion: 
 - drag effect(https://www.framer.com/api/motion/gestures/#drag)
+
 ***
 
 
