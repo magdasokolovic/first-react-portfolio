@@ -1,11 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import './Contact.scss'
 import Lottie from 'react-lottie';
 import animationData from '../lotties/contact-me.json';
-
+import {database} from './Firebase'
 
 
 export default function Contact() {
+
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+    const [loader, setLoader] = useState(false)
+
     const defaultOptions = {
         loop: true,
         autoplay: true,
@@ -14,23 +20,70 @@ export default function Contact() {
           preserveAspectRatio: "xMidYMid slice"
         }
       };
-      
+    
+      const handleSubmit = (e) => {
+          e.preventDefault();
+          setLoader(true);
+          database.collection('contacts').add({
+              name: name,
+              email: email,
+              message: message
+          })
+          .then(() => {
+              alert('Your message has been submitted ♥️')
+              setLoader(false)
+          })
+          .catch(error => {
+              alert(error.message)
+              setLoader(false)
+          })
+          setName('')
+          setEmail('')
+          setMessage('')
+      }
+
     return (
         <div className='container'>
             <div className='wrapper'>
                 <p>Feel free to reach me anytime.</p>
                       
                 <div className="flex-container">
-                    <form className="contact-form" method="post" action="">
+                    <form 
+                        onSubmit={()=>handleSubmit}
+                        className="contact-form" 
+                        method="post" 
+                        action="">
 
-                        <input name="name" type="text" className="form-control" placeholder="Your Name" required />
+                        <input name="name" 
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            type="text" 
+                            className="form-control" 
+                            placeholder="Your Name" 
+                            required />
 
-                        <input name="email" type="email" className="form-control" placeholder="Your Email" required />
+                        <input name="email" 
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}   
+                            type="email" 
+                            className="form-control" 
+                            placeholder="Your Email" 
+                            required />
 
-                        <textarea name="message" className="form-control" placeholder="Message" rows="4" required></textarea>
+                        <textarea name="message"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                            className="form-control" 
+                            placeholder="Your message goes here!" 
+                            rows="4" 
+                            required>
+                        </textarea>
 
-                        <input type="submit" className="form-control submit" value="SEND MESSAGE" />
-
+                        <input 
+                            type="submit" 
+                            className="form-control submit" 
+                            value="SEND MESSAGE"
+                            style={{backgroundColor: loader ? '#e20001' : '#191919'}} />
                     </form>
 
                     <Lottie 

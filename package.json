@@ -1,12 +1,12 @@
 {
   "name": "magda-first-portfolio",
-  "homepage": "https://github.com/magdasokolovic/first-react-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "firebase": "^8.5.0",
     "framer-motion": "^4.1.10",
     "gh-pages": "^3.1.0",
     "gsap": "^3.6.1",
