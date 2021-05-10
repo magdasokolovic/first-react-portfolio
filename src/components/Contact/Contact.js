@@ -27,7 +27,8 @@ export default function Contact() {
           database.collection('contacts').add({
               name: name,
               email: email,
-              message: message
+              message: message, 
+            //   createdAt: serverTimestamp()
           })
           .then(() => {
               alert('Your message has been submitted ♥️')
