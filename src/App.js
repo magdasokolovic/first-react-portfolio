@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {HashRouter, Switch, Route} from 'react-router-dom'
 import './App.scss';
 import Header from './components/Header/Header'
 import Books from './components/Books/Books'
@@ -20,7 +20,7 @@ function App() {
       })
 
   return (
-    <Router>
+    <HashRouter>
       <div className="App">
           {loading ? 
             <Loading loading={loading} />
@@ -41,7 +41,7 @@ function App() {
         }
        
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
