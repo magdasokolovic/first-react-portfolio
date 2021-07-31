@@ -40,7 +40,7 @@
 
 #### framer-motion: 
 - drag effect(https://www.framer.com/api/motion/gestures/#drag)
-
+- the way to use @keyframes in framer-motion: **initial={{height: 0}} animate={{height: [0, window.innerHeight,0]}}** the array means the beginning, then half-way,,then a final animation
 ***
 
 // for deployment add to json:

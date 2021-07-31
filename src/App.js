@@ -7,10 +7,12 @@ import Contact from './components/Contact/Contact'
 import Home from './components/Home/Home'
 import Projects from './components/Projects/Projects'
 import Loading from './components/Loading'
+import useMousePosition from './hooks/useMousePosition';
 
 function App() {
   
   const [loading, setLoading] = useState(true)
+  const {x, y} = useMousePosition()
 
   
       useEffect(() => {
@@ -31,7 +33,10 @@ function App() {
                     <Switch>
                       <Route exact path="/" component={Home} />
                       <Route exact path="/books" component={Books} />
-                      <Route exact path="/projects" component={Projects} />
+                      {/* <Route exact path="/projects" component={Projects} /> */}
+                      <Route exact path="/projects">
+                        <Projects x={x} y={y}/>
+                      </Route>
                       <Route exact path="/contact" component={Contact} />
                     </Switch>
                   </div>
