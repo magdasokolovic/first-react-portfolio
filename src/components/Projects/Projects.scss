@@ -53,13 +53,16 @@ a {
       }
     }
   }
-
+.projects-text {
+    text-align: left;
+}
 // PROJECTS STYLING
 .projects {
     position: fixed;
+    top: 0;
     height: 100%;
     width: 100%;
-    max-width: 1280px;
+    // max-width: 1280px;
     z-index: 9;
     overflow: hidden;
 
@@ -92,8 +95,8 @@ a {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 8rem 0;
-            // height: 100vh;
+            padding: 0;
+            height: 100vh;
             ul {
                 width: 100%;
                 display: block;
@@ -113,7 +116,7 @@ a {
                                 h2 {
                                     overflow: hidden;
                                     margin: 0;
-                                    font-size: 4rem;
+                                    font-size: 3rem;
                                     font-weight: 500;
                                 }
                             }
@@ -122,6 +125,7 @@ a {
                                 overflow: hidden;
                                 position: absolute;
                                 left: 30rem;
+                                // bottom: 0;
                                 width: 7.6rem;
                                 height: 5rem;
                                 .mask {
@@ -145,6 +149,7 @@ a {
                                 background-position: 50%;
                                 z-index: 99;
                                 overflow: hidden;
+                                opacity: 0;
                             }
                         }
                         .line {

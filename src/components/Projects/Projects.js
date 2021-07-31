@@ -1,51 +1,64 @@
 import React from "react";
 import './Projects.scss'
-// import image1 from '../images/cFT30RSA.webp'
-// import image2 from '../images/FdXpCDEQ.webp'
-// import image3 from '../images/IJIekO5A.webp'
-// import image4 from '../images/NcyWXYWg.webp'
-// import image5 from '../images/vEjhtoKA.webp'
-
+import {motion} from "framer-motion"
 import data from './projects.json'
 
+
+//transiton:
+const transition = {duration: .8, ease: [0.6, -0.05, 0.01, 0.9]}
+//VARIANTS
+const titleSlideUp = {
+  initial: {y: 200}, 
+  animate: {y: 0}
+}
+
+          // <div className='container'>
+            //<div className='wrapper'> 
+            // </div>
+          // </div>
+
+
 export default function Projects() {
- 
     return (
-          <div className='container'>
-            <div className='wrapper'>
-              <p>
+            <>
+              <p className='projects-text'>
                 my projects:
               </p>
               <div className="projects">
                 <div className="menu">
                   <div className="container-menu">
                     <div className="menu-inner">
-                      <ul>
+                      <motion.ul 
+                        // variants={}
+                        initial="initial"animate="animate"
+                        exit="exit"
+                      >
                        {data.map(list=>(
-                         <List key={list.id} title={list.title} image={list.src} leftLineFlex={list.leftLineFlex} rightLineFlex={list.rightLineFlex}/>
+                         <List key={list.id} title={list.title} image={list.src} leftLineFlex={list.leftLineFlex} rightLineFlex={list.rightLineFlex}
+                         thumbnail={list.thumbnailPosition} link={list.link}
+                         />
                        ))}
-                      </ul>
+                      </motion.ul>
                     </div>
                   </div>
                 </div>
               </div>
+            </>
               
-            </div>
-          </div>
     );
   }
 
-  const List = ({title, image, leftLineFlex, rightLineFlex}) => {
+  const List = ({title, image, leftLineFlex, rightLineFlex, thumbnailPosition, link}) => {
     return (
-      <li>
-        <a href="https://moviebay.netlify.app/">
+      <motion.li>
+        <a href={link}>
           <div className="menu-item-wrapper">
             <div className={`line left flex-${leftLineFlex}`}>
               {/* <div className="mask"></div> */}
             </div>
             <div className="title">
-              <h2><div className="text">{title}</div></h2>
-            <div className="thumbnail">
+              <h2><motion.div variants={titleSlideUp} className="text">{title}</motion.div></h2>
+            <div className="thumbnail" style={{left: thumbnailPosition}}>
               <img src={image} alt="model portrait" />
               {/* <div className="mask"></div> */}
             </div>
@@ -58,6 +71,6 @@ export default function Projects() {
             </div>
           </div>
         </a>
-    </li>
+    </motion.li>
     )
   }
