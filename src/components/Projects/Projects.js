@@ -25,7 +25,7 @@ const lineGrow = {
 
 
 
-export default function Projects({x, y}) {
+export default function Projects({x, y, setCursorHovered}) {
     return (
             <div className='project-container'>
                 <p className='container'>
@@ -46,6 +46,7 @@ export default function Projects({x, y}) {
                           x={x}
                           y={y}
                           offset={list.offset}
+                          setCursorHovered={setCursorHovered}
                           />
                         ))}
                         </motion.ul>
@@ -57,7 +58,7 @@ export default function Projects({x, y}) {
     );
   }
 
-  const List = ({title, image, leftLineFlex, rightLineFlex, thumbnailPosition, link, x, y, offset}) => {
+  const List = ({title, image, leftLineFlex, rightLineFlex, thumbnailPosition, link, x, y, offset, setCursorHovered}) => {
 
     const list = useRef()
     const [hoverState, setHoverState] = useState(false)
@@ -83,7 +84,8 @@ export default function Projects({x, y}) {
             <motion.div className="title"
               onHoverStart={()=>setHoverState(true)}
               onHoverEnd={()=>setHoverState(false)}
-
+              onMouseEnter={() =>setCursorHovered(true)}
+              onMouseLeave={() =>setCursorHovered(false)}
             >
               <h2><motion.div variants={titleSlideUp} transition={transition} className="text">{title}</motion.div></h2>
             </motion.div>

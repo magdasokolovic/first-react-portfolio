@@ -4,7 +4,7 @@ import {withRouter, Link} from "react-router-dom"
 import Menu from '../Menu/Menu'
 import './Header.scss';
 
-const Header = ({history}) => {
+const Header = ({history, setCursorHovered}) => {
     //State for menu button:
     const [state, setState] = useState({
         // initial represents the initial load of the website, runs only 1 time:
@@ -73,7 +73,11 @@ const Header = ({history}) => {
                     <div className="logo">
                         <Link to="/">MAGDA</Link>
                     </div>
-                    <div className="menu">
+                    <div className="menu"
+                        onMouseEnter={() =>setCursorHovered(true)}
+                        onMouseLeave={() =>setCursorHovered(false)}
+
+                    >
                         <button disabled={disabled} onClick={handleMenu}>{state.menuName}</button>
                     </div>
                 </div>
