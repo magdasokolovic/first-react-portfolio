@@ -113,6 +113,11 @@ a {
                             .title {
                                 z-index: 10;
                                 margin: 0 1rem;
+                                &:hover {
+                                    -webkit-text-fill-color: white;
+                                    -webkit-text-stroke-width: 1px;
+                                    -webkit-text-stroke-color: $black;
+                                }
                                 h2 {
                                     overflow: hidden;
                                     margin: 0;
@@ -217,25 +222,5 @@ a {
             }
         }
     }
-}
-
-//Panels
-.project-container {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-}
-.left-panel-background,
-.right-panel-background {
-    height: 100vh;
-    width: 50vw;
-    position: absolute;
-    z-index: 11;
-    background:#e7e7de;
-
-}
-.right-panel-background {
-    right: 0;
-    background: #e7dee7;
 }
 

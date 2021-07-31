@@ -28,6 +28,7 @@ function App() {
             <Loading loading={loading} />
             :  
              <>
+             <div className="cursor"></div>
               <Header/>
                   <div className="home">
                     <Switch>

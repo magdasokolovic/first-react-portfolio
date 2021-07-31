@@ -31,8 +31,6 @@ body {
   align-items: center;
   height: 100%;
   width: 100%;
-
-
 }
 
 p {
@@ -47,6 +45,19 @@ h5 {
   font-size: 1.5rem;
   font-weight: 600;
   padding-right: 360px;
+}
+
+.cursor {
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  background: #e7dede;
+  pointer-events: none;
+  border-radius: 100%;
+
 }
 
 

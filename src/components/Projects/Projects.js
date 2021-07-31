@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useRef, useEffect} from "react";
 import './Projects.scss'
 import {motion} from "framer-motion"
 import data from './projects.json'
@@ -22,10 +22,7 @@ const lineGrow = {
   initial: {width: "100%"},
   animate: {width: 0},
 }
-          // <div className='container'>
-            //<div className='wrapper'> 
-            // </div>
-          // </div>
+
 
 
 export default function Projects({x, y}) {
@@ -48,6 +45,7 @@ export default function Projects({x, y}) {
                           thumbnail={list.thumbnailPosition} link={list.link}
                           x={x}
                           y={y}
+                          offset={list.offset}
                           />
                         ))}
                         </motion.ul>
@@ -55,31 +53,54 @@ export default function Projects({x, y}) {
                     </div>
                   </div>
                 </div>
-                {/* <Panels/> */}
-              </div>
-
-
-              
+              </div>     
     );
   }
 
-  const List = ({title, image, leftLineFlex, rightLineFlex, thumbnailPosition, link, x, y}) => {
+  const List = ({title, image, leftLineFlex, rightLineFlex, thumbnailPosition, link, x, y, offset}) => {
+
+    const list = useRef()
+    const [hoverState, setHoverState] = useState(false)
+    const [listPosition, setListPosition] = useState({
+      top: 0, left: 0
+    })
+
+    useEffect(()=>{
+      setListPosition({
+        top: list.current.getBoundingClientRect().top,
+        left: list.current.getBoundingClientRect().left
+
+      })
+    }, [hoverState])
+
     return (
-      <motion.li>
+      <li ref={list}>
         <a href={link}>
           <div className="menu-item-wrapper">
             <div className={`line left flex-${leftLineFlex}`}>
               <motion.div variants={lineGrow} transition={{...transition, duration: 1}} className="mask"></motion.div>
             </div>
-            <div className="title">
+            <motion.div className="title"
+              onHoverStart={()=>setHoverState(true)}
+              onHoverEnd={()=>setHoverState(false)}
+
+            >
               <h2><motion.div variants={titleSlideUp} transition={transition} className="text">{title}</motion.div></h2>
-            </div>
+            </motion.div>
             <div className="thumbnail" style={{left: thumbnailPosition}}>
               <img src={image} alt="model portrait" />
               <motion.div variants={lineGrow} transition={{...transition, duration: 1}} className="mask"></motion.div>
             </div>
             <motion.div 
-            initial={opacity: 0}
+            initial={{opacity: 0}}
+            animate={{
+              opacity: hoverState ? 1 : 0,
+              x: x - listPosition.left + offset,
+              y: y - listPosition.top,
+            }}
+            transition={{
+              ease: "easeOut"
+            }}
             className="floating-image">
               <img src={image}  alt="" />
             </motion.div>
@@ -89,19 +110,19 @@ export default function Projects({x, y}) {
             
           </div>
         </a>
-    </motion.li>
+    </li>
     )
   }
 
-  const Panels = () =>{
-    return (
-      <>
-        <motion.div initial={{height: 0}} animate={{height: [0, window.innerHeight,0], bottom: [null, 0, 0]}} 
-        exit={{height: [0, window.innerHeight,0], top: [null, 0, 0]}}  transition={{...transition, duration: 2, times: [0, .5, 1]}} className="left-panel-background"></motion.div>
-        <motion.div initial={{height: 0}} animate={{height: [0, window.innerHeight,0], bottom: [0, 0, window.innerHeight]}} 
-        exit={{height: [0, window.innerHeight,0], bottom: [null, 0, 0]}} 
-        transition={{...transition, duration: 2, times: [0, .5, 1]}}  className="right-panel-background" ></motion.div>
+  // const Panels = () =>{
+  //   return (
+  //     <>
+  //       <motion.div initial={{height: 0}} animate={{height: [0, window.innerHeight,0], bottom: [null, 0, 0]}} 
+  //       exit={{height: [0, window.innerHeight,0], top: [null, 0, 0]}}  transition={{...transition, duration: 2, times: [0, .5, 1]}} className="left-panel-background"></motion.div>
+  //       <motion.div initial={{height: 0}} animate={{height: [0, window.innerHeight,0], bottom: [0, 0, window.innerHeight]}} 
+  //       exit={{height: [0, window.innerHeight,0], bottom: [null, 0, 0]}} 
+  //       transition={{...transition, duration: 2, times: [0, .5, 1]}}  className="right-panel-background" ></motion.div>
 
-      </>
-    )
-  }
+  //     </>
+  //   )
+  // }
