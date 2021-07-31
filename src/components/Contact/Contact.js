@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import './Contact.scss'
 import Lottie from 'react-lottie';
 import animationData from '../lotties/contact-me.json';
-import {database} from './Firebase'
+
 
 
 export default function Contact() {
@@ -24,20 +24,20 @@ export default function Contact() {
       const handleSubmit = (e) => {
           e.preventDefault();
           setLoader(true);
-          database.collection('contacts').add({
-              name: name,
-              email: email,
-              message: message, 
-            //   createdAt: serverTimestamp()
-          })
-          .then(() => {
-              alert('Your message has been submitted ♥️')
-              setLoader(false)
-          })
-          .catch(error => {
-              alert(error.message)
-              setLoader(false)
-          })
+        //   database.collection('contacts').add({
+        //       name: name,
+        //       email: email,
+        //       message: message, 
+        //     //   createdAt: serverTimestamp()
+        //   })
+        //   .then(() => {
+        //       alert('Your message has been submitted ♥️')
+        //       setLoader(false)
+        //   })
+        //   .catch(error => {
+        //       alert(error.message)
+        //       setLoader(false)
+        //   })
           setName('')
           setEmail('')
           setMessage('')

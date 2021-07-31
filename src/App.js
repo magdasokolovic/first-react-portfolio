@@ -5,7 +5,7 @@ import Header from './components/Header/Header'
 import Books from './components/Books/Books'
 import Contact from './components/Contact/Contact'
 import Home from './components/Home/Home'
-import Projects from './components/Projects'
+import Projects from './components/Projects/Projects'
 import Loading from './components/Loading'
 
 function App() {
@@ -27,7 +27,6 @@ function App() {
             :  
              <>
               <Header/>
-
                   <div className="home">
                     <Switch>
                       <Route exact path="/" component={Home} />
@@ -36,7 +35,6 @@ function App() {
                       <Route exact path="/contact" component={Contact} />
                     </Switch>
                   </div>
-                
             </>
         }
        
