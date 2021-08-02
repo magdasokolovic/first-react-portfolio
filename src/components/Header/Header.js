@@ -76,7 +76,6 @@ const Header = ({history, setCursorHovered}) => {
                     <div className="menu"
                         onMouseEnter={() =>setCursorHovered(true)}
                         onMouseLeave={() =>setCursorHovered(false)}
-
                     >
                         <button disabled={disabled} onClick={handleMenu}>{state.menuName}</button>
                     </div>
