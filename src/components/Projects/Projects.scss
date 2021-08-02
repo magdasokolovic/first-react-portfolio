@@ -1,6 +1,4 @@
 //VARIABLES:
-
-
 $background: #f6f6f6;
 $text: #12131d;
 $secondary: #434448;
@@ -53,9 +51,7 @@ a {
       }
     }
   }
-.projects-text {
-    text-align: left;
-}
+
 // PROJECTS STYLING
 .projects {
     position: fixed;
@@ -130,7 +126,7 @@ a {
                                 overflow: hidden;
                                 position: absolute;
                                 left: 30rem;
-                                // bottom: 0;
+
                                 width: 7.6rem;
                                 height: 5rem;
                                 .mask {
@@ -147,6 +143,7 @@ a {
                                     right: 0;
                                     object-fit: cover;
                                     background-position: top;
+                                    opacity: .8;
                                 }
                             }
 
@@ -158,7 +155,6 @@ a {
                                 background-position: 50%;
                                 z-index: 99;
                                 overflow: hidden;
-                                // opacity: 0;
                             }
                         }
                         .line {

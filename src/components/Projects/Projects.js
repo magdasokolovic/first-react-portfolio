@@ -27,8 +27,8 @@ const lineGrow = {
 
 export default function Projects({x, y, setCursorHovered}) {
     return (
-            <div className='project-container'>
-                <p className='container'>
+            <>
+                <p className="container">
                   my projects:
                 </p>
                 <div className="projects">
@@ -54,7 +54,7 @@ export default function Projects({x, y, setCursorHovered}) {
                     </div>
                   </div>
                 </div>
-              </div>     
+              </>     
     );
   }
 
