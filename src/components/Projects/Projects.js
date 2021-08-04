@@ -41,9 +41,12 @@ export default function Projects() {
               }}
               transition={{ease: "linear", duration: 0.2}}
               ></motion.div> */}
-                <p className="container">
-                  my projects:
+              <div className="container">
+                <p className="wrapper">
+                    my projects:
                 </p>
+              </div>
+                
                 <div className="projects">
                   <div className="menu">
                     <div className="container-menu">

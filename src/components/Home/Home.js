@@ -4,8 +4,8 @@ import './Home.scss'
 import {TweenMax, TimelineLite, Power3} from 'gsap'
 
 import arrow from '../images/arrow-right.svg'
-import me from '../images/Optimized-5.jpg';
-import me2 from '../images/Optimized-6.jpg'
+import me from '../images/Optimized-5.webp';
+import me2 from '../images/Optimized-6.webp'
 
 function Home() {
   // referencing DOM elements with useRef
