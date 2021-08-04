@@ -27,8 +27,10 @@ export const fadeInUp = node => {
     }
 
     // function for navigation items:
-export const staggerText = (node1, node2, node3) => {
-        gsap.from([node1, node2, node3], {
+//     , node3
+// , node3
+export const staggerText = (node1, node2) => {
+        gsap.from([node1, node2], {
             duration: .8,
             y: 100,
             delay: .1,

@@ -44,6 +44,9 @@
 - the way to use @keyframes in framer-motion: **initial={{height: 0}} animate={{height: [0, window.innerHeight,0]}}** the array means the beginning, then half-way,,then a final animation
 ***
 
+### Issues: 
+- Home Page was completetely disappearing as soon as I moved  the mouseafter I added a custom cursor to the App. Decided not to add Custom Cursor to the project.
+
 // for deployment add to json:
 // "homepage": ".",
 // "predeploy": "npm run build",

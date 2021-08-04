@@ -4,7 +4,7 @@ import {withRouter, Link} from "react-router-dom"
 import Menu from '../Menu/Menu'
 import './Header.scss';
 
-const Header = ({history, setCursorHovered}) => {
+const Header = ({history}) => {
     //State for menu button:
     const [state, setState] = useState({
         // initial represents the initial load of the website, runs only 1 time:
@@ -21,7 +21,7 @@ const Header = ({history, setCursorHovered}) => {
     //use effect for page changes: 
     useEffect(() => {
         //listen for page changes: 
-        //getting rid of the open menu and setting the name back to "Menu"
+        //getting rid of the "open" menu and setting the name back to "Menu"
         history.listen(() => {
             setState({
                 clicked: false, menuName: 'Menu'
@@ -74,8 +74,8 @@ const Header = ({history, setCursorHovered}) => {
                         <Link to="/">MAGDA</Link>
                     </div>
                     <div className="menu"
-                        onMouseEnter={() =>setCursorHovered(true)}
-                        onMouseLeave={() =>setCursorHovered(false)}
+                        // onMouseEnter={() =>setCursorHovered(true)}
+                        // onMouseLeave={() =>setCursorHovered(false)}
                     >
                         <button disabled={disabled} onClick={handleMenu}>{state.menuName}</button>
                     </div>

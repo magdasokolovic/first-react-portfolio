@@ -2,7 +2,7 @@ import React, {useState, useRef, useEffect} from "react";
 import './Projects.scss'
 import {motion} from "framer-motion"
 import data from './projects.json'
-
+// import useMousePosition from '../../hooks/useMousePosition'
 
 //transiton:
 const transition = {duration: .8, ease: [0.6, -0.05, 0.01, 0.9]}
@@ -25,9 +25,22 @@ const lineGrow = {
 
 
 
-export default function Projects({x, y, setCursorHovered}) {
+export default function Projects() {
+    // const {x, y} = useMousePosition()
+    // const [cursorHovered, setCursorHovered] = useState(false)
+
     return (
             <>
+            {/* <motion.div
+              className="cursor"
+              animate={{
+                x: x - 16,
+                y: y - 16,
+                scale: cursorHovered ? 1.2 : 1,
+                opacity: cursorHovered ? 0.8 : 0
+              }}
+              transition={{ease: "linear", duration: 0.2}}
+              ></motion.div> */}
                 <p className="container">
                   my projects:
                 </p>
@@ -43,10 +56,10 @@ export default function Projects({x, y, setCursorHovered}) {
                         {data.map(list=>(
                           <List key={list.id} title={list.title} image={list.src} leftLineFlex={list.leftLineFlex} rightLineFlex={list.rightLineFlex}
                           thumbnail={list.thumbnailPosition} link={list.link}
-                          x={x}
-                          y={y}
+                          // x={x}
+                          // y={y}
                           offset={list.offset}
-                          setCursorHovered={setCursorHovered}
+                          // setCursorHovered={setCursorHovered}
                           />
                         ))}
                         </motion.ul>
@@ -59,7 +72,6 @@ export default function Projects({x, y, setCursorHovered}) {
   }
 
   const List = ({title, image, leftLineFlex, rightLineFlex, thumbnailPosition, link, x, y, offset, setCursorHovered}) => {
-
     const list = useRef()
     const [hoverState, setHoverState] = useState(false)
     const [listPosition, setListPosition] = useState({
@@ -84,8 +96,8 @@ export default function Projects({x, y, setCursorHovered}) {
             <motion.div className="title"
               onHoverStart={()=>setHoverState(true)}
               onHoverEnd={()=>setHoverState(false)}
-              onMouseEnter={() =>setCursorHovered(true)}
-              onMouseLeave={() =>setCursorHovered(false)}
+              // onMouseEnter={() =>setCursorHovered(true)}
+              // onMouseLeave={() =>setCursorHovered(false)}
             >
               <h2><motion.div variants={titleSlideUp} transition={transition} className="text">{title}</motion.div></h2>
             </motion.div>
@@ -116,15 +128,3 @@ export default function Projects({x, y, setCursorHovered}) {
     )
   }
 
-  // const Panels = () =>{
-  //   return (
-  //     <>
-  //       <motion.div initial={{height: 0}} animate={{height: [0, window.innerHeight,0], bottom: [null, 0, 0]}} 
-  //       exit={{height: [0, window.innerHeight,0], top: [null, 0, 0]}}  transition={{...transition, duration: 2, times: [0, .5, 1]}} className="left-panel-background"></motion.div>
-  //       <motion.div initial={{height: 0}} animate={{height: [0, window.innerHeight,0], bottom: [0, 0, window.innerHeight]}} 
-  //       exit={{height: [0, window.innerHeight,0], bottom: [null, 0, 0]}} 
-  //       transition={{...transition, duration: 2, times: [0, .5, 1]}}  className="right-panel-background" ></motion.div>
-
-  //     </>
-  //   )
-  // }

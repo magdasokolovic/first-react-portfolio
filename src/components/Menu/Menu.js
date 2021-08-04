@@ -12,7 +12,7 @@ export default function Menu({state}) {
     let revealMenuBackground = useRef(null)
     let line1 = useRef(null)
     let line2 = useRef(null)
-    let line3 = useRef(null)
+    // let line3 = useRef(null)
     let info = useRef(null)
     
 
@@ -57,7 +57,7 @@ export default function Menu({state}) {
             })
             staggerReveal(revealMenuBackground, revealMenu);
             fadeInUp(info);
-            staggerText(line1, line2, line3);
+            staggerText(line1, line2);
         }
     }, [state]) // use dependency [state] to watch changes
 
@@ -70,25 +70,25 @@ export default function Menu({state}) {
                             <div className="menu-links">
                                 <nav>
                                     <ul>
-                                        <li>
+                                        {/* <li>
                                             <Link
                                             onMouseEnter={e=>handleHover(e)}
                                             onMouseOut={e=>handleHoverExit(e)}
                                             ref={el => (line1 = el)} to="./books">Books
                                             </Link>
-                                        </li>
+                                        </li> */}
                                         <li>
                                             <Link
                                             onMouseEnter={e=>handleHover(e)}
                                             onMouseOut={e=>handleHoverExit(e)}
-                                            ref={el => (line2 = el)} to="./projects">Projects
+                                            ref={el => (line1 = el)} to="./projects">Projects
                                             </Link>
                                         </li>
                                         <li>
                                             <Link
                                             onMouseEnter={e=>handleHover(e)}
                                             onMouseOut={e=>handleHoverExit(e)}
-                                            ref={el => (line3 = el)} to="./contact">Contact
+                                            ref={el => (line2 = el)} to="./contact">Contact
                                             </Link>
                                         </li>
                                     </ul>

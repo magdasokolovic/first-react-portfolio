@@ -1,8 +1,8 @@
 import React, {useRef, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import './Home.scss'
-
 import {TweenMax, TimelineLite, Power3} from 'gsap'
+
 import arrow from '../images/arrow-right.svg'
 import me from '../images/Optimized-5.jpg';
 import me2 from '../images/Optimized-6.jpg'
@@ -14,14 +14,13 @@ function Home() {
     let content = useRef(null);
     //once the entire page is loaded the timeline will wait .2s
     let tl = new TimelineLite({delay: .2})
-   
-  
     useEffect(() => {
 
-      // targets:
+      // Image variables:
       const firstImage = images.firstElementChild;
       const secondImage = images.lastElementChild;
-  
+
+      //Content variables:
       const headlineFirst = content.children[0].children[0]
       const headlineSecond = headlineFirst.nextSibling;
       const headlineThird = headlineSecond.nextSibling;
@@ -29,8 +28,7 @@ function Home() {
       const contentButton = content.children[2];
       // 'to' - defines final state, 'from' defines initial state
   
-      // removing initial flash, at the beginning the visibility is hidden: 
-      //the entire hero section is hidden until all dom elements are loaded
+      // removing initial flash, at the beginning the visibility is hidden until all dom elements are loaded: 
       // TweenMax makes the dom visible right away
               // TARGET, DURATION, CONFIGURATION:
       TweenMax.to(hero, 0, {css: {visibility: 'visible'}})
@@ -56,7 +54,7 @@ function Home() {
           .from(contentP, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1.4)
           .from(contentButton, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1.6)
   
-      //useEffectis dependent on timeline variable (called here tl). 
+      //useEffect is dependent on timeline variable (called here tl). 
     })
   
     return (

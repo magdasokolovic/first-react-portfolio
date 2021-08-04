@@ -58,8 +58,9 @@ a {
     top: 0;
     height: 100%;
     width: 100%;
-    // max-width: 1280px;
     z-index: 9;
+    // z-index: 50;
+
     overflow: hidden;
 
     .menu {
@@ -108,6 +109,8 @@ a {
                             align-items: flex-end;
                             .title {
                                 z-index: 10;
+                                // z-index: 51;
+
                                 margin: 0 1rem;
                                 &:hover {
                                     -webkit-text-fill-color: white;
@@ -207,6 +210,8 @@ a {
                                 width: 100%;
                                 height: 6px;
                                 z-index: 9;
+                                // z-index: 50;
+
                                 position: absolute;
                                 &.right {
                                     right: 0;

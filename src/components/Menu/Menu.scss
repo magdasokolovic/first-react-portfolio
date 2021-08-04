@@ -2,10 +2,12 @@ $red: #e20001;
 $black: #191919;
 
 .hamburger-menu {
+  height: 100vh;
+  overflow: hidden;
     display: none;
     position: fixed;
     // we set z-index for a menu to show when the menu is open
-    z-index: 9;
+    z-index: 15;
     top: 0;
     bottom: 0;
     left: 0;
