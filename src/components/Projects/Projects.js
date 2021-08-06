@@ -85,7 +85,6 @@ export default function Projects() {
       setListPosition({
         top: list.current.getBoundingClientRect().top,
         left: list.current.getBoundingClientRect().left
-
       })
     }, [hoverState])
 
