@@ -1,7 +1,6 @@
 import React, {useRef, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import {TweenMax, TimelineLite, Power3} from 'gsap'
-
 import arrow from './images/arrow-right.svg'
 import me from './images/Optimized-5.webp';
 import me2 from './images/Optimized-6.webp'
@@ -85,7 +84,7 @@ function Home() {
                       </div>
                   </h1>
   
-                  <p>I have no idea what to say here</p>
+                  <p>I am open for new job <span className="red">/</span> internship opportunities</p>
 
                   <div className="btn-row">
                     <button className="explore-button">
@@ -103,12 +102,14 @@ function Home() {
                   <div className="hero-image me">
                     <img src={me} alt='me'/>
                   </div>
-  
                   <div className="hero-image me2">
                     <img src={me2} alt='me2'/>
                   </div>
                 </div>
               </div>
+              <footer>
+                <h6>&copy; Copyright 2021 Magda Sokolovic</h6>
+              </footer>
             </div>
           </div>
       </div>

@@ -1,6 +1,5 @@
-//importing Popping font:
+//importing Poppins font:
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,800&display=swap");
-
 
 
 html,
@@ -19,8 +18,12 @@ body {
   min-width: 1280px;
   margin: 0 auto;
 
+
   .wrapper {
     padding: 0 48px;
+    @media (max-width: $layout-breakpoint-small) {
+        padding: 0 2em;
+      }
   }
 }
 
@@ -45,5 +48,19 @@ h5 {
   font-weight: 600;
   padding-right: 360px;
 }
+h6 {
+    font-weight: 400;
+    text-align: left;
+}
+
+// footer {
+//     h6{
+//         @media (max-width: $layout-breakpoint-small) {
+//             width: 100vw;
+//             margin: 0 2em;
+//         }
+//     } 
+
+// }
 
 

@@ -5,26 +5,42 @@
     min-width: 1440px;
     visibility: hidden;
     height: 100vh;
+    
     .hero-container {
         width: 1280px;
         min-width: 1280px;
-  
+        @media (max-width: $layout-breakpoint-small) {
+          max-width: 85vw;
+          margin: 0 auto;
+        }
         .hero-inner {
           display: flex;
           align-items:center;
           justify-content: space-between;
           margin: 0 24px;
           height: 100vh;
+          @media (max-width: $layout-breakpoint-small) {
+            flex-direction: column;
+            max-height: 100vh;
+          }
           .hero-content {
             width: 50%;
             .hero-content-inner {
               width: 410px;
               margin: 0 auto 200px;
               color: $black;
+              @media (max-width: $layout-breakpoint-small) {
+                width: 300px;
+                margin: 0 auto;
+              }
               h1 {
                 font-weight: 500;
-                font-size: 32px;
+                font-size: 2rem;
                 margin-bottom: 24px;
+                @media (max-width: $layout-breakpoint-small) {
+                  font-size: 1.5rem;
+                  line-height: .8;
+                }
                 .hero-content-line {
                   margin: 0;
                   height: 44px;
@@ -76,6 +92,10 @@
                     border-radius: 100px;
                     left: 130px;
                     transform-origin: center center;
+                    @media (max-width: $layout-breakpoint-small) {
+                      height: 22px;
+                      width: 22px;
+                    }
                   }
                 }
               }
@@ -91,8 +111,17 @@
           width: 50%;
           height: 100vh;
           position: relative;
+          @media (max-width: $layout-breakpoint-small) {
+            // height: 100vh;
+            width: 25%;
+            margin: 0 auto;
+          }
   
           .hero-images-inner {
+            @media (max-width: $layout-breakpoint-small) {
+              display: flex;
+              flex-direction: column;
+            }
             .hero-image {
               position: absolute;
               overflow: hidden;
@@ -101,13 +130,19 @@
                 right: 0;
                 width: 45%;
                 height: 50%;
+                @media (max-width: $layout-breakpoint-small) {
+                  top: 5%;
+                }
               }
               &.me2 {
+                
                 bottom: 24px;
                 left: 0px;
                 width: 52%;
                 height: 65%;
+
               }
+              
               img {
                 position:  absolute;
                 top: 0;
