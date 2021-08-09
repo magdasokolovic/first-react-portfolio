@@ -109,8 +109,7 @@ a {
                             align-items: flex-end;
                             .title {
                                 z-index: 10;
-                                mix-blend-mode: multiply;
-
+                                mix-blend-mode: luminosity;
                                 margin: 0 1rem;
                                 &:hover {
                                     -webkit-text-fill-color: white;
@@ -122,14 +121,14 @@ a {
                                     margin: 0;
                                     font-size: 4rem;
                                     font-weight: 500;
-            
+
                                 }
                             }
                             .thumbnail {
                                 margin-bottom: 1.4rem;
                                 overflow: hidden;
                                 position: absolute;
-                                left: 30rem;
+                                right: -6rem;
                                 object-fit: contain;
                                 width: 9.6rem;
 

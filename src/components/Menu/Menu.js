@@ -12,7 +12,6 @@ export default function Menu({state}) {
     let revealMenuBackground = useRef(null)
     let line1 = useRef(null)
     let line2 = useRef(null)
-    // let line3 = useRef(null)
     let info = useRef(null)
     
 
@@ -70,13 +69,6 @@ export default function Menu({state}) {
                             <div className="menu-links">
                                 <nav>
                                     <ul>
-                                        {/* <li>
-                                            <Link
-                                            onMouseEnter={e=>handleHover(e)}
-                                            onMouseOut={e=>handleHoverExit(e)}
-                                            ref={el => (line1 = el)} to="./books">Books
-                                            </Link>
-                                        </li> */}
                                         <li>
                                             <Link
                                             onMouseEnter={e=>handleHover(e)}

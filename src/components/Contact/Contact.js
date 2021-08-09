@@ -24,20 +24,6 @@ export default function Contact() {
       const handleSubmit = (e) => {
           e.preventDefault();
           setLoader(true);
-        //   database.collection('contacts').add({
-        //       name: name,
-        //       email: email,
-        //       message: message, 
-        //     //   createdAt: serverTimestamp()
-        //   })
-        //   .then(() => {
-        //       alert('Your message has been submitted ♥️')
-        //       setLoader(false)
-        //   })
-        //   .catch(error => {
-        //       alert(error.message)
-        //       setLoader(false)
-        //   })
           setName('')
           setEmail('')
           setMessage('')

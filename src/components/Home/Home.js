@@ -54,7 +54,6 @@ function Home() {
           .from(contentP, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1.4)
           .from(contentButton, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1.6)
   
-      //useEffect is dependent on timeline variable (called here tl). 
     })
   
     return (
