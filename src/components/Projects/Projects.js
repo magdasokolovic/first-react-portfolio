@@ -3,6 +3,7 @@ import './Projects.scss'
 import {motion} from "framer-motion"
 import data from './projects.json'
 // import useMousePosition from '../../hooks/useMousePosition'
+// import wedding from 'https://ik.imagekit.io/magdasokolovic/movie_bay_okCxC0uT-.png?updatedAt=1628494170499'
 
 //transiton:
 const transition = {duration: .8, ease: [0.6, -0.05, 0.01, 0.9]}
@@ -104,7 +105,7 @@ export default function Projects() {
               <h2><motion.div variants={titleSlideUp} transition={transition} className="text">{title}</motion.div></h2>
             </motion.div>
             <div className="thumbnail" style={{left: thumbnailPosition}}>
-              <img src={image} alt="model portrait" />
+              <img src={image} alt="a screenshot of the website home page" />
               <motion.div variants={lineGrow} transition={{...transition, duration: 1}} className="mask"></motion.div>
             </div>
             <motion.div 
@@ -118,7 +119,7 @@ export default function Projects() {
               ease: "easeOut"
             }}
             className="floating-image">
-              <img src={image}  alt="" />
+              <img src={image}  alt="a bigger screenshot of the website home page" />
             </motion.div>
             <div className={`line right flex-${rightLineFlex}`}>
               <motion.div variants={lineGrow} transition={{...transition, duration: 1}} className="mask right"></motion.div>
