@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import {HashRouter, Switch, Route} from 'react-router-dom'
-import './App.scss';
-import Header from './components/Header/Header'
-import Contact from './components/Contact/Contact'
-import Home from './components/Home/Home'
+import './sass/main.scss';
+import Header from './components/Header'
+import Contact from './components/Contact'
+import Home from './components/Home'
 import Projects from './components/Projects/Projects'
 import Loading from './components/Loading'
 

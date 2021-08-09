@@ -1,5 +1,5 @@
-
 import gsap from "gsap";
+
 //ANIMATION FUNCTIONS:
 
     //for the background:

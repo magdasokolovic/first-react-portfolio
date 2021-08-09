@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {withRouter, Link} from "react-router-dom"
 //withRouter gives us an access to props.history,  which means the header can now redirect the user, we can determine if url has been changed
-import Menu from '../Menu/Menu'
-import './Header.scss';
+import Menu from './Menu/Menu'
 
 const Header = ({history}) => {
     //State for menu button:

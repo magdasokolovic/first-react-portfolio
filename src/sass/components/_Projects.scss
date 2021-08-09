@@ -1,9 +1,6 @@
-//VARIABLES:
-$background: #f6f6f6;
-$text: #12131d;
-$secondary: #434448;
-$black: #191919;
-$cursor: #e7dede;
+
+
+
 
 //GENERAL STYLING:
 a {
@@ -109,7 +106,7 @@ a {
                             align-items: flex-end;
                             .title {
                                 z-index: 10;
-                                mix-blend-mode: luminosity;
+                                mix-blend-mode: difference;
                                 margin: 0 1rem;
                                 &:hover {
                                     -webkit-text-fill-color: white;
@@ -121,14 +118,14 @@ a {
                                     margin: 0;
                                     font-size: 4rem;
                                     font-weight: 500;
-
+                                    color: $black;
                                 }
                             }
                             .thumbnail {
                                 margin-bottom: 1.4rem;
                                 overflow: hidden;
                                 position: absolute;
-                                right: -6rem;
+                                right: 30rem;
                                 object-fit: contain;
                                 width: 9.6rem;
 
@@ -147,7 +144,7 @@ a {
                                     right: 0;
                                     object-fit: cover;
                                     background-position: top;
-                                    opacity: 1;
+                                    opacity: .7;
                                 }
                             }
 

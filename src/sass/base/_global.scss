@@ -1,8 +1,7 @@
 //importing Popping font:
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,800&display=swap");
-// creating color variables: 
-$red: #e20001;
-$black: #191919;
+
+
 
 html,
 body {
@@ -47,18 +46,4 @@ h5 {
   padding-right: 360px;
 }
 
-.cursor {
-  cursor: pointer;
-  height: 2.5rem;
-  width: 2.5rem;
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  background: #e7dede;
-  pointer-events: none;
-  border-radius: 100%;
-}
 
-
-  
-  

@@ -1,7 +1,6 @@
 import React, {useEffect, useRef} from 'react'
 import {Link} from 'react-router-dom'
 import gsap from 'gsap';
-import './Menu.scss'
 import {staggerReveal, fadeInUp, staggerText, handleHover, handleHoverExit} from './MenuAnimations'
 
 
