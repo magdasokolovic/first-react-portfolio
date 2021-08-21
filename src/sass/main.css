@@ -22,12 +22,18 @@ body {
   margin: 0 auto;
 }
 
-.container .wrapper {
+@media (max-width: 960px) {
+  .container {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
   padding: 0 48px;
 }
 
 @media (max-width: 960px) {
-  .container .wrapper {
+  .wrapper {
     padding: 0 2em;
   }
 }
@@ -63,6 +69,13 @@ h5 {
 h6 {
   font-weight: 400;
   text-align: left;
+}
+
+@media (max-width: 960px) {
+  footer h6 {
+    width: 100%;
+    margin: 0 2em;
+  }
 }
 
 .hero {

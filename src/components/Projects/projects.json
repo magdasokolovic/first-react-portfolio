@@ -9,16 +9,7 @@
       "link": "https://moviebay.netlify.app/",
       "src": "https://ik.imagekit.io/magdasokolovic/portfolio_projects/movie_bay_ur1zvEt5C.webp?updatedAt=1628495388552"
     },
-    {
-      "title": "React Node.js Full Stack Blog App",
-      "id": "React Node.js Full Stack Blog App",
-      "leftLineFlex": 3,
-      "rightLineFlex": 1,
-      "thumbnailPosition": 200,
-      "offset": -500,
-      "link": "https://github.com/magdasokolovic/blog-app-second-version",
-      "src": "https://ik.imagekit.io/magdasokolovic/portfolio_projects/blog_qhqfE0IBDA.webp?updatedAt=1628495388599"
-    },
+    
     {
       "title": "Wedding Anniversary wishes",
       "id": "Rebuilding Awwwards Website",

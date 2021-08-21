@@ -107,10 +107,11 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <footer>
+              
+            </div>
+            <footer className="wrapper">
                 <h6>&copy; Copyright 2021 Magda Sokolovic</h6>
               </footer>
-            </div>
           </div>
       </div>
     );
