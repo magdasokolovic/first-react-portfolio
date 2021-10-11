@@ -17,16 +17,17 @@ body {
   width: 1280px;
   min-width: 1280px;
   margin: 0 auto;
+  @media (max-width: $layout-breakpoint-small) {
+    overflow: hidden;
+    }   
+}
 
-
-  .wrapper {
+.wrapper {
     padding: 0 48px;
     @media (max-width: $layout-breakpoint-small) {
         padding: 0 2em;
-      }
-  }
+    }
 }
-
 .home {
   display: flex;
   justify-content: center;
@@ -53,14 +54,14 @@ h6 {
     text-align: left;
 }
 
-// footer {
-//     h6{
-//         @media (max-width: $layout-breakpoint-small) {
-//             width: 100vw;
-//             margin: 0 2em;
-//         }
-//     } 
+footer {
+    h6{
+        @media (max-width: $layout-breakpoint-small) {
+            width: 100%;
+            margin: 0 2em;
+        }
+    } 
 
-// }
+}
 
 
