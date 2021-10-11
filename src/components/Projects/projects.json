@@ -9,7 +9,16 @@
       "link": "https://moviebay.netlify.app/",
       "src": "https://ik.imagekit.io/magdasokolovic/portfolio_projects/movie_bay_ur1zvEt5C.webp?updatedAt=1628495388552"
     },
-    
+    {
+      "title": "'Pawfect' - pet adoption website",
+      "id": "'Pawfect' - pet adoption website",
+      "leftLineFlex": 3,
+      "rightLineFlex": 1,
+      "thumbnailPosition": 200,
+      "offset": -500,
+      "link": "https://pawfect.netlify.app/",
+      "src": "https://ik.imagekit.io/magdasokolovic/portfolio_projects/pawfect_YgM1qWemr.webp?updatedAt=1633942725044"
+    },
     {
       "title": "Wedding Anniversary wishes",
       "id": "Rebuilding Awwwards Website",
